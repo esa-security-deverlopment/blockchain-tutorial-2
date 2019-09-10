@@ -1,0 +1,4076 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages" content="en">
+
+    
+
+    <title>virtualenv · PyPI</title>
+    <meta name="description" content="Virtual Python Environment builder">
+
+    <link rel="stylesheet" href="/static/css/warehouse.b94adcf5.css">
+    <link rel="stylesheet" href="/static/css/fontawesome.91df071f.css">
+    <link rel="stylesheet" href="/static/css/regular.8819f1a9.css">
+    <link rel="stylesheet" href="/static/css/solid.002489ee.css">
+    <link rel="stylesheet" href="/static/css/brands.0c9eb08b.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic%7CSource+Code+Pro:500">
+    <noscript>
+      &lt;link rel="stylesheet" href="/static/css/noscript.69d08c82.css"&gt;
+    </noscript>
+
+    
+
+    <link rel="icon" href="/static/images/favicon.6a76275d.ico" type="image/x-icon">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 latest updates" href="/rss/updates.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 newest packages" href="/rss/packages.xml">
+    
+    <link rel="canonical" href="https://pypi.org/project/virtualenv/">
+    
+
+    <meta property="og:url" content="https://pypi.org/project/virtualenv/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pypi.org/static/images/twitter.c0030826.jpg">
+    <meta property="og:title" content="virtualenv">
+    <meta property="og:description" content="Virtual Python Environment builder">
+
+    <link rel="search" type="application/opensearchdescription+xml" title="PyPI" href="/opensearch.xml">
+
+    
+    <script src="https://www.fastly-insights.com/static/lib.801e7f6c67784b00f63e239e11858bb60b0a090b.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" integrity="sha384-D6LXy67EIC102DTuqypxwQsTHgiatlbvg7q/1YAWFb6lRyZ1lIZ6bGDsX7jxHNKA" crossorigin="anonymous">
+    </script>
+    
+    <script async="" data-ga-id="UA-55961911-1" data-sentry-frontend-dsn="https://3a67b35c9dc248a191d761410b095861@sentry.io/1231155" src="/static/js/warehouse.dd6308f0.js">
+    </script>
+    
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-55961911-1"></script>
+    <script defer="" src="https://www.fastly-insights.com/insights.js?k=6a52360a-f306-421e-8ed5-7417d0d4a4e9&amp;dnt=true"></script>
+  </head>
+
+  <body data-controller="viewport-toggle" style="padding-top: 0px;">
+    
+
+    <!-- Accessibility: this link should always be the first piece of content inside the body-->
+    <a href="#content" class="skip-to-content">Skip to main content</a>
+
+    <button type="button" class="button button--primary button--switch-to-mobile hidden" data-target="viewport-toggle.switchToMobile" data-action="viewport-toggle#switchToMobile">
+      Switch to mobile version
+    </button>
+
+    <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+      <!-- Add browser warning. Will show for ie9 and below -->
+      <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">You are using an unsupported browser, upgrade to a newer version.</span>
+      </div>
+      <![endif]-->
+      
+      <noscript>
+      &lt;div class="notification-bar notification-bar--warning" role="status"&gt;
+        
+        &lt;span class="notification-bar__icon"&gt;
+          &lt;i class="fa fa-exclamation-triangle" aria-hidden="true"&gt;&lt;/i&gt;
+          &lt;span class="sr-only"&gt;Warning&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span class="notification-bar__message"&gt;Some features may not work without JavaScript. Please try enabling it if you encounter problems.&lt;/span&gt;
+      &lt;/div&gt;
+      </noscript>
+    </div>
+
+    
+      <div data-html-include="/_includes/flash-messages/">
+
+
+
+</div>
+    
+
+    
+
+    
+      <div data-html-include="/_includes/session-notifications/">
+
+</div>
+    
+
+    <header class="site-header ">
+      <div class="site-container">
+        <div class="split-layout">
+          
+          <div class="split-layout">
+            <div>
+              <a class="site-header__logo" href="/">
+                <img alt="PyPI" src="/static/images/logo-small.6eef541e.svg">
+              </a>
+            </div>
+
+            <form class="search-form search-form--primary" action="/search/" role="search">
+              <label for="search" class="sr-only">Search PyPI</label>
+              <input id="search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+              
+              <button type="submit" class="search-form__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
+          </div>
+          
+
+          <div data-html-include="/_includes/current-user-indicator/">
+    
+    <div id="user-indicator" class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+  <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet" aria-label="Main navigation">
+    <ul>
+      <li class="horizontal-menu__item"><a href="/help/" class="horizontal-menu__link">Help</a></li>
+      <li class="horizontal-menu__item"><a href="https://donate.pypi.org" class="horizontal-menu__link">Donate</a></li>
+      <li class="horizontal-menu__item"><a href="/account/login/" class="horizontal-menu__link">Log in</a></li>
+      <li class="horizontal-menu__item"><a href="/account/register/" class="horizontal-menu__link">Register</a></li>
+    </ul>
+  </nav>
+  <nav class="dropdown dropdown--on-menu hidden show-on-tablet" aria-label="Main navigation">
+    <button type="button" class="horizontal-menu__link dropdown__trigger" aria-haspopup="true" aria-expanded="false" data-dropdown-bound="true">
+      Menu
+      <span class="dropdown__trigger-caret">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </button>
+    <ul class="dropdown__content">
+      <li><a class="dropdown__link" href="/help/">Help</a></li>
+      <li><a class="dropdown__link" href="https://donate.pypi.org">Donate</a></li>
+      <li><a class="dropdown__link" href="/account/login/">Log in</a></li>
+      <li><a class="dropdown__link" href="/account/register/">Register</a></li>
+    </ul>
+  </nav>
+</div>
+  </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="mobile-search">
+      <form class="search-form search-form--fullwidth" action="/search/" role="search">
+        <label for="mobile-search" class="sr-only">Search PyPI</label>
+        <input id="mobile-search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+        
+        <button type="submit" class="search-form__button">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Search</span>
+        </button>
+      </form>
+    </div>
+    
+
+    <main id="content">
+      
+<div class="banner">
+  <div class="package-header">
+    <div class="package-header__left">
+      <h1 class="package-header__name">
+        virtualenv 16.7.5
+      </h1>
+
+      
+      <p class="package-header__pip-instructions">
+        <span id="pip-command">pip install virtualenv</span>
+        <button type="button" class="-js-copy-pip-command tooltipped tooltipped-s" data-clipboard-target="#pip-command" aria-label="Copied!" data-original-label="Copy to clipboard">
+          <i class="fa fa-copy" aria-hidden="true"></i>
+          <span class="sr-only">Copy PIP instructions</span>
+        </button>
+      </p>
+      
+    </div>
+
+    <div class="package-header__right">
+      
+      <a class="status-badge status-badge--good" href="/project/virtualenv/">
+        <span>Latest version</span>
+      </a>
+      
+      <p class="package-header__date">Last released: <time class="-js-relative-time" datetime="2019-09-03T16:44:19+0000" data-controller="localized-time" data-localized-time-relative="true">Sep 3, 2019</time></p>
+    </div>
+  </div>
+</div>
+
+<div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+  <div class="site-container">
+    <div class="split-layout split-layout--middle package-description">
+    
+      <p class="package-description__summary">Virtual Python Environment builder</p>
+    
+    <div data-html-include="/_includes/edit-project-button/virtualenv"></div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="project-tabs" data-project-tabs-content="description">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navigation</h3>
+          <nav aria-label="Navigation for virtualenv">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab" data-target="project-tabs.tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active" href="#description">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+                  Project description
+                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab" data-target="project-tabs.tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" href="#history">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  Release history
+                </a>
+              </li>
+              
+              <li role="tab">
+                <a id="files-tab" data-target="project-tabs.tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" href="#files">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                  Download files
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+        
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://virtualenv.pypa.io/" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/pypa/virtualenv/issues" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-bug" aria-hidden="true"></i>Tracker
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/pypa/virtualenv" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Source
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="github-repo-info" data-url="https://api.github.com/repos/pypa/virtualenv">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item" data-key="html_url" data-attr="href" data-supplement="/stargazers" rel="noopener" target="_blank" href="https://github.com/pypa/virtualenv/stargazers">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars: </strong>
+          <span class="github-repo-info__item" data-key="stargazers_count">3&nbsp;197</span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item" data-key="html_url" data-attr="href" data-supplement="/network" rel="noopener" target="_blank" href="https://github.com/pypa/virtualenv/network">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks: </strong>
+          <span class="github-repo-info__item" data-key="forks_count">762</span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item" data-key="html_url" data-attr="href" data-supplement="/issues" rel="noopener" target="_blank" href="https://github.com/pypa/virtualenv/issues">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues/PRs: </strong>
+          <span class="github-repo-info__item" data-key="open_issues_count">64</span>
+        </a>
+      </li><li>
+    </li></ul>
+  </div>
+  
+  <p>View statistics for this project via <a href="https://libraries.io/pypi/virtualenv" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using
+    <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">Google
+      BigQuery</a></p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> MIT License (MIT)</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:ianb@colorstudy.com">Ian Bicking</a></p>
+  
+  
+    <p><strong>Maintainer:</strong> <a href="mailto:gaborjbernat@gmail.com">Bernat Gabor</a></p>
+  
+  
+  <p class="tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <span class="sr-only">Tags</span>
+    
+    <span class="package-keyword">
+      virtual,
+    </span>
+    
+    <span class="package-keyword">
+      environments,
+    </span>
+    
+    <span class="package-keyword">
+      isolated
+    </span>
+    
+  </p>
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=2.7,  !=3.0.*,  !=3.1.*,  !=3.2.*,  !=3.3.*
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/brosner/" aria-label="brosner">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/81edaf5fbca62a506fe3ca4c5469a5f3a459fdc3/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62373437326263376161343563373036343163323939653934303862373861623f73697a653d3530" height="50" width="50" alt="Avatar for brosner from gravatar.com" title="Avatar for brosner from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          brosner
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/carljm/" aria-label="carljm">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/41b0dcdf94c3534f039353ae40a12d0c822184be/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62316633366535353462653065316165313966396137346436656365393130373f73697a653d3530" height="50" width="50" alt="Avatar for carljm from gravatar.com" title="Avatar for carljm from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          carljm
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/dstufft/" aria-label="dstufft">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/6d0424bff7dd2ff3855b621bf1470d578040d430/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f65626631333233363262363232343233656435626163613239383839313162383f73697a653d3530" height="50" width="50" alt="Avatar for dstufft from gravatar.com" title="Avatar for dstufft from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          dstufft
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/gaborbernat/" aria-label="gaborbernat">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/857888e9738755c6640d604d0d4a9b5270145ab1/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66386362616634353664356265643466653738643735386135653864323766633f73697a653d3530" height="50" width="50" alt="Avatar for gaborbernat from gravatar.com" title="Avatar for gaborbernat from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          gaborbernat
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/ianb/" aria-label="ianb">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/10dae02d6863c14f967e871ffedcc6db22e0a19a/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f63633833333438363963396432613965363033303137663264613830356562333f73697a653d3530" height="50" width="50" alt="Avatar for ianb from gravatar.com" title="Avatar for ianb from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          ianb
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/Ivoz/" aria-label="Ivoz">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/40e83710fff810c52eedd78e945d3736d68f8024/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f31626466656439313035356132653136363463353764373766396165393838323f73697a653d3530" height="50" width="50" alt="Avatar for Ivoz from gravatar.com" title="Avatar for Ivoz from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          Ivoz
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/jezdez/" aria-label="jezdez">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/f5be0eb8e2c533acb4f3e0880b8b6e5794d5c575/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f63663335393566613136366266623431303632313165313639376633396639343f73697a653d3530" height="50" width="50" alt="Avatar for jezdez from gravatar.com" title="Avatar for jezdez from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          jezdez
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/pf_moore/" aria-label="pf_moore">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/1d0deb041bb7e8edce368279a37546324366eced/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64393935623436326139386665613431326566613739643137626133373837613f73697a653d3530" height="50" width="50" alt="Avatar for pf_moore from gravatar.com" title="Avatar for pf_moore from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          pf_moore
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/qwcode/" aria-label="qwcode">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/8635a1b4a03d124651526e6d8afe5ec3cb5a4086/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f35346134626233656230623539393266353266643531363139366439633833643f73697a653d3530" height="50" width="50" alt="Avatar for qwcode from gravatar.com" title="Avatar for qwcode from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          qwcode
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Development Status</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable">
+            5 - Production/Stable
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Intended Audience</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+            Developers
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+MIT+License">
+            OSI Approved :: MIT License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Operating System</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+MacOS+%3A%3A+MacOS+X">
+            MacOS :: MacOS X
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+Microsoft+%3A%3A+Windows">
+            Microsoft :: Windows
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+POSIX">
+            POSIX
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2">
+            Python :: 2
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2.7">
+            Python :: 2.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.4">
+            Python :: 3.4
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.5">
+            Python :: 3.5
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.6">
+            Python :: 3.6
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.7">
+            Python :: 3.7
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Topic</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries">
+            Software Development :: Libraries
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Testing">
+            Software Development :: Testing
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Utilities">
+            Utilities
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navigation for virtualenv">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab" data-target="project-tabs.mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active" href="#description">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+                Project description
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab" data-target="project-tabs.mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" href="#data">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                Project details
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab" data-target="project-tabs.mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" href="#history">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              Release history
+            </a>
+            </li>
+            
+            <li role="tab">
+              <a id="mobile-files-tab" data-target="project-tabs.mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" href="#files">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Download files
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        <div id="description" data-target="project-tabs.content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="description-tab mobile-description-tab" style="display: block;">
+          <h2 class="page-title">Project description</h2>
+          
+          <div class="project-description">
+            <p>A tool for creating isolated ‘virtual’ python environments.</p>
+<a href="https://pypi.org/project/virtualenv" rel="nofollow"><img alt="Latest version on PyPi" src="https://warehouse-camo.cmh1.psfhosted.org/b3bea1458fa6f6487cdb25274dff6f804a8dd03a/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f7669727475616c656e762e737667"></a>
+<a href="https://pypi.org/project/virtualenv/" rel="nofollow"><img alt="Supported Python versions" src="https://warehouse-camo.cmh1.psfhosted.org/e67a9d4c43057037e3327bdf6849aaa0f04c1fa8/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f7669727475616c656e762e737667"></a>
+<a href="https://dev.azure.com/pypa/virtualenv/_build/latest?definitionId=11&amp;branchName=master" rel="nofollow"><img alt="Azure Pipelines build status" src="https://warehouse-camo.cmh1.psfhosted.org/64e907d7ebef72d3752a76718726fe75be6863d0/68747470733a2f2f6465762e617a7572652e636f6d2f707970612f7669727475616c656e762f5f617069732f6275696c642f7374617475732f707970612e7669727475616c656e763f6272616e63684e616d653d6d6173746572"></a>
+<a href="https://virtualenv.readthedocs.io/en/latest/?badge=latest" rel="nofollow"><img alt="Documentation status" src="https://warehouse-camo.cmh1.psfhosted.org/7d6db6046a5083cf564ffe73037e39d77462b09e/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f7669727475616c656e762f62616467652f3f76657273696f6e3d6c6174657374267374796c653d666c61742d737175617265"></a>
+<a href="https://github.com/ambv/black" rel="nofollow"><img alt="Code style: black" src="https://warehouse-camo.cmh1.psfhosted.org/fbfdc7754183ecf079bc71ddeabaf88f6cbc5c00/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64652532307374796c652d626c61636b2d3030303030302e737667"></a>
+<ul>
+<li><a href="https://virtualenv.pypa.io/en/latest/installation.html" rel="nofollow">Installation</a></li>
+<li><a href="https://virtualenv.pypa.io/" rel="nofollow">Documentation</a></li>
+<li><a href="https://virtualenv.pypa.io/en/latest/changes.html" rel="nofollow">Changelog</a></li>
+<li><a href="https://github.com/pypa/virtualenv/issues" rel="nofollow">Issues</a></li>
+<li><a href="https://pypi.org/project/virtualenv/" rel="nofollow">PyPI</a></li>
+<li><a href="https://github.com/pypa/virtualenv" rel="nofollow">Github</a></li>
+<li><a href="http://groups.google.com/group/python-virtualenv" rel="nofollow">User mailing list</a></li>
+<li><a href="http://groups.google.com/group/pypa-dev" rel="nofollow">Dev mailing list</a></li>
+<li>User IRC: <a href="https://webchat.freenode.net/?channels=%23pypa" rel="nofollow">#pypa on Freenode</a></li>
+<li>Dev IRC: <a href="https://webchat.freenode.net/?channels=%23pypa-dev" rel="nofollow">#pypa-dev on Freenode</a></li>
+</ul>
+<div id="code-of-conduct">
+<h2>Code of Conduct</h2>
+<p>Everyone interacting in the virtualenv project’s codebases, issue trackers,
+chat rooms, and mailing lists is expected to follow the
+<a href="https://www.pypa.io/en/latest/code-of-conduct/" rel="nofollow">PyPA Code of Conduct</a>.</p>
+</div>
+
+          </div>
+          
+        </div>
+
+        
+        <div id="data" data-target="project-tabs.content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="mobile-data-tab" style="display: none;">
+          <h2 class="page-title">Project details</h2>
+          
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://virtualenv.pypa.io/" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/pypa/virtualenv/issues" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-bug" aria-hidden="true"></i>Tracker
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/pypa/virtualenv" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Source
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="github-repo-info hidden" data-url="https://api.github.com/repos/pypa/virtualenv">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item" data-key="html_url" data-attr="href" data-supplement="/stargazers" rel="noopener" target="_blank" href="https://github.com/pypa/virtualenv/stargazers">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars: </strong>
+          <span class="github-repo-info__item" data-key="stargazers_count">3&nbsp;197</span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item" data-key="html_url" data-attr="href" data-supplement="/network" rel="noopener" target="_blank" href="https://github.com/pypa/virtualenv/network">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks: </strong>
+          <span class="github-repo-info__item" data-key="forks_count">762</span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item" data-key="html_url" data-attr="href" data-supplement="/issues" rel="noopener" target="_blank" href="https://github.com/pypa/virtualenv/issues">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues/PRs: </strong>
+          <span class="github-repo-info__item" data-key="open_issues_count">64</span>
+        </a>
+      </li><li>
+    </li></ul>
+  </div>
+  
+  <p>View statistics for this project via <a href="https://libraries.io/pypi/virtualenv" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using
+    <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">Google
+      BigQuery</a></p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> MIT License (MIT)</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:ianb@colorstudy.com">Ian Bicking</a></p>
+  
+  
+    <p><strong>Maintainer:</strong> <a href="mailto:gaborjbernat@gmail.com">Bernat Gabor</a></p>
+  
+  
+  <p class="tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <span class="sr-only">Tags</span>
+    
+    <span class="package-keyword">
+      virtual,
+    </span>
+    
+    <span class="package-keyword">
+      environments,
+    </span>
+    
+    <span class="package-keyword">
+      isolated
+    </span>
+    
+  </p>
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=2.7,  !=3.0.*,  !=3.1.*,  !=3.2.*,  !=3.3.*
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/brosner/" aria-label="brosner">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/81edaf5fbca62a506fe3ca4c5469a5f3a459fdc3/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62373437326263376161343563373036343163323939653934303862373861623f73697a653d3530" height="50" width="50" alt="Avatar for brosner from gravatar.com" title="Avatar for brosner from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          brosner
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/carljm/" aria-label="carljm">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/41b0dcdf94c3534f039353ae40a12d0c822184be/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62316633366535353462653065316165313966396137346436656365393130373f73697a653d3530" height="50" width="50" alt="Avatar for carljm from gravatar.com" title="Avatar for carljm from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          carljm
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/dstufft/" aria-label="dstufft">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/6d0424bff7dd2ff3855b621bf1470d578040d430/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f65626631333233363262363232343233656435626163613239383839313162383f73697a653d3530" height="50" width="50" alt="Avatar for dstufft from gravatar.com" title="Avatar for dstufft from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          dstufft
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/gaborbernat/" aria-label="gaborbernat">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/857888e9738755c6640d604d0d4a9b5270145ab1/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66386362616634353664356265643466653738643735386135653864323766633f73697a653d3530" height="50" width="50" alt="Avatar for gaborbernat from gravatar.com" title="Avatar for gaborbernat from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          gaborbernat
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/ianb/" aria-label="ianb">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/10dae02d6863c14f967e871ffedcc6db22e0a19a/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f63633833333438363963396432613965363033303137663264613830356562333f73697a653d3530" height="50" width="50" alt="Avatar for ianb from gravatar.com" title="Avatar for ianb from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          ianb
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/Ivoz/" aria-label="Ivoz">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/40e83710fff810c52eedd78e945d3736d68f8024/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f31626466656439313035356132653136363463353764373766396165393838323f73697a653d3530" height="50" width="50" alt="Avatar for Ivoz from gravatar.com" title="Avatar for Ivoz from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          Ivoz
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/jezdez/" aria-label="jezdez">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/f5be0eb8e2c533acb4f3e0880b8b6e5794d5c575/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f63663335393566613136366266623431303632313165313639376633396639343f73697a653d3530" height="50" width="50" alt="Avatar for jezdez from gravatar.com" title="Avatar for jezdez from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          jezdez
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/pf_moore/" aria-label="pf_moore">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/1d0deb041bb7e8edce368279a37546324366eced/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64393935623436326139386665613431326566613739643137626133373837613f73697a653d3530" height="50" width="50" alt="Avatar for pf_moore from gravatar.com" title="Avatar for pf_moore from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          pf_moore
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/qwcode/" aria-label="qwcode">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.cmh1.psfhosted.org/8635a1b4a03d124651526e6d8afe5ec3cb5a4086/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f35346134626233656230623539393266353266643531363139366439633833643f73697a653d3530" height="50" width="50" alt="Avatar for qwcode from gravatar.com" title="Avatar for qwcode from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          qwcode
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Development Status</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable">
+            5 - Production/Stable
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Intended Audience</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+            Developers
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+MIT+License">
+            OSI Approved :: MIT License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Operating System</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+MacOS+%3A%3A+MacOS+X">
+            MacOS :: MacOS X
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+Microsoft+%3A%3A+Windows">
+            Microsoft :: Windows
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+POSIX">
+            POSIX
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2">
+            Python :: 2
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2.7">
+            Python :: 2.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.4">
+            Python :: 3.4
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.5">
+            Python :: 3.5
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.6">
+            Python :: 3.6
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.7">
+            Python :: 3.7
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Topic</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries">
+            Software Development :: Libraries
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Testing">
+            Software Development :: Testing
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Utilities">
+            Utilities
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+          <br>
+        </div>
+
+        
+        <div id="history" data-target="project-tabs.content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="history-tab mobile-history-tab" style="display: none;">
+          <h2 class="page-title split-layout">
+            <span>Release history</span>
+            <a class="reset-text margin-top" href="/help/#project-release-notifications">Release notifications</a>
+          </h2>
+
+          <div class="release-timeline">
+            
+            
+            
+            
+            <div class="release release--latest release--current">
+              <div class="release__meta">
+                
+                <span class="badge">This version</span>
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/blue-cube.e6165d35.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.7.5/">
+                <p class="release__version">
+                  16.7.5 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-09-03T16:44:19+0000" data-controller="localized-time" aria-label="Sep 3, 2019, 18:44:19 GMT+2" data-original-label="Sep 3, 2019, 18:44:19 GMT+2">Sep 3, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.7.4/">
+                <p class="release__version">
+                  16.7.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-08-23T09:13:52+0000" data-controller="localized-time" aria-label="Aug 23, 2019, 11:13:52 GMT+2" data-original-label="Aug 23, 2019, 11:13:52 GMT+2">Aug 23, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.7.3/">
+                <p class="release__version">
+                  16.7.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-08-16T08:22:16+0000" data-controller="localized-time" aria-label="Aug 16, 2019, 10:22:16 GMT+2" data-original-label="Aug 16, 2019, 10:22:16 GMT+2">Aug 16, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.7.2/">
+                <p class="release__version">
+                  16.7.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-07-26T09:14:51+0000" data-controller="localized-time" aria-label="Jul 26, 2019, 11:14:51 GMT+2" data-original-label="Jul 26, 2019, 11:14:51 GMT+2">Jul 26, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.7.1/">
+                <p class="release__version">
+                  16.7.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-07-25T11:12:02+0000" data-controller="localized-time" aria-label="Jul 25, 2019, 13:12:02 GMT+2" data-original-label="Jul 25, 2019, 13:12:02 GMT+2">Jul 25, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.7.0/">
+                <p class="release__version">
+                  16.7.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-07-23T15:40:49+0000" data-controller="localized-time" aria-label="Jul 23, 2019, 17:40:49 GMT+2" data-original-label="Jul 23, 2019, 17:40:49 GMT+2">Jul 23, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.6.2/">
+                <p class="release__version">
+                  16.6.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-07-14T21:30:16+0000" data-controller="localized-time" aria-label="Jul 14, 2019, 23:30:16 GMT+2" data-original-label="Jul 14, 2019, 23:30:16 GMT+2">Jul 14, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.6.1/">
+                <p class="release__version">
+                  16.6.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-06-16T14:36:05+0000" data-controller="localized-time" aria-label="Jun 16, 2019, 16:36:05 GMT+2" data-original-label="Jun 16, 2019, 16:36:05 GMT+2">Jun 16, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.6.0/">
+                <p class="release__version">
+                  16.6.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-05-15T09:19:17+0000" data-controller="localized-time" aria-label="May 15, 2019, 11:19:17 GMT+2" data-original-label="May 15, 2019, 11:19:17 GMT+2">May 15, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.5.0/">
+                <p class="release__version">
+                  16.5.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-04-24T10:11:21+0000" data-controller="localized-time" aria-label="Apr 24, 2019, 12:11:21 GMT+2" data-original-label="Apr 24, 2019, 12:11:21 GMT+2">Apr 24, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.4.4.dev0/">
+                <p class="release__version">
+                  16.4.4.dev0 <span class="badge badge--warning release__version-badge">pre-release</span>
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-04-24T09:41:54+0000" data-controller="localized-time" aria-label="Apr 24, 2019, 11:41:54 GMT+2" data-original-label="Apr 24, 2019, 11:41:54 GMT+2">Apr 24, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.4.3/">
+                <p class="release__version">
+                  16.4.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-02-28T22:26:18+0000" data-controller="localized-time" aria-label="Feb 28, 2019, 23:26:18 GMT+1" data-original-label="Feb 28, 2019, 23:26:18 GMT+1">Feb 28, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.4.1/">
+                <p class="release__version">
+                  16.4.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-02-22T15:31:07+0000" data-controller="localized-time" aria-label="Feb 22, 2019, 16:31:07 GMT+1" data-original-label="Feb 22, 2019, 16:31:07 GMT+1">Feb 22, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.4.0/">
+                <p class="release__version">
+                  16.4.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-02-09T11:15:13+0000" data-controller="localized-time" aria-label="Feb 9, 2019, 12:15:13 GMT+1" data-original-label="Feb 9, 2019, 12:15:13 GMT+1">Feb 9, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.3.1.dev0/">
+                <p class="release__version">
+                  16.3.1.dev0 <span class="badge badge--warning release__version-badge">pre-release</span>
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-02-09T10:47:58+0000" data-controller="localized-time" aria-label="Feb 9, 2019, 11:47:58 GMT+1" data-original-label="Feb 9, 2019, 11:47:58 GMT+1">Feb 9, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.3.0/">
+                <p class="release__version">
+                  16.3.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-01-25T14:59:51+0000" data-controller="localized-time" aria-label="Jan 25, 2019, 15:59:51 GMT+1" data-original-label="Jan 25, 2019, 15:59:51 GMT+1">Jan 25, 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.2.0/">
+                <p class="release__version">
+                  16.2.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2018-12-31T22:16:05+0000" data-controller="localized-time" aria-label="Dec 31, 2018, 23:16:05 GMT+1" data-original-label="Dec 31, 2018, 23:16:05 GMT+1">Dec 31, 2018</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.1.0/">
+                <p class="release__version">
+                  16.1.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2018-10-31T15:23:27+0000" data-controller="localized-time" aria-label="Oct 31, 2018, 16:23:27 GMT+1" data-original-label="Oct 31, 2018, 16:23:27 GMT+1">Oct 31, 2018</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/16.0.0/">
+                <p class="release__version">
+                  16.0.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2018-05-16T23:36:56+0000" data-controller="localized-time" aria-label="May 17, 2018, 01:36:56 GMT+2" data-original-label="May 17, 2018, 01:36:56 GMT+2">May 17, 2018</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/15.2.0/">
+                <p class="release__version">
+                  15.2.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2018-03-22T02:23:44+0000" data-controller="localized-time" aria-label="Mar 22, 2018, 03:23:44 GMT+1" data-original-label="Mar 22, 2018, 03:23:44 GMT+1">Mar 22, 2018</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/15.1.0/">
+                <p class="release__version">
+                  15.1.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-11-16T02:40:09+0000" data-controller="localized-time" aria-label="Nov 16, 2016, 03:40:09 GMT+1" data-original-label="Nov 16, 2016, 03:40:09 GMT+1">Nov 16, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/15.0.3/">
+                <p class="release__version">
+                  15.0.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-08-05T12:50:14+0000" data-controller="localized-time" aria-label="Aug 5, 2016, 14:50:14 GMT+2" data-original-label="Aug 5, 2016, 14:50:14 GMT+2">Aug 5, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/15.0.2/">
+                <p class="release__version">
+                  15.0.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-05-28T19:21:20+0000" data-controller="localized-time" aria-label="May 28, 2016, 21:21:20 GMT+2" data-original-label="May 28, 2016, 21:21:20 GMT+2">May 28, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/15.0.1/">
+                <p class="release__version">
+                  15.0.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-03-17T15:17:53+0000" data-controller="localized-time" aria-label="Mar 17, 2016, 16:17:53 GMT+1" data-original-label="Mar 17, 2016, 16:17:53 GMT+1">Mar 17, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/15.0.0/">
+                <p class="release__version">
+                  15.0.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-03-06T01:15:17+0000" data-controller="localized-time" aria-label="Mar 6, 2016, 02:15:17 GMT+1" data-original-label="Mar 6, 2016, 02:15:17 GMT+1">Mar 6, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/14.0.6/">
+                <p class="release__version">
+                  14.0.6 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-02-07T19:44:55+0000" data-controller="localized-time" aria-label="Feb 7, 2016, 20:44:55 GMT+1" data-original-label="Feb 7, 2016, 20:44:55 GMT+1">Feb 7, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/14.0.5/">
+                <p class="release__version">
+                  14.0.5 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-02-01T07:10:49+0000" data-controller="localized-time" aria-label="Feb 1, 2016, 08:10:49 GMT+1" data-original-label="Feb 1, 2016, 08:10:49 GMT+1">Feb 1, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/14.0.4/">
+                <p class="release__version">
+                  14.0.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-01-31T22:03:51+0000" data-controller="localized-time" aria-label="Jan 31, 2016, 23:03:51 GMT+1" data-original-label="Jan 31, 2016, 23:03:51 GMT+1">Jan 31, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/14.0.3/">
+                <p class="release__version">
+                  14.0.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-01-28T18:55:12+0000" data-controller="localized-time" aria-label="Jan 28, 2016, 19:55:12 GMT+1" data-original-label="Jan 28, 2016, 19:55:12 GMT+1">Jan 28, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/14.0.2/">
+                <p class="release__version">
+                  14.0.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-01-28T12:52:14+0000" data-controller="localized-time" aria-label="Jan 28, 2016, 13:52:14 GMT+1" data-original-label="Jan 28, 2016, 13:52:14 GMT+1">Jan 28, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/14.0.1/">
+                <p class="release__version">
+                  14.0.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-01-22T00:50:29+0000" data-controller="localized-time" aria-label="Jan 22, 2016, 01:50:29 GMT+1" data-original-label="Jan 22, 2016, 01:50:29 GMT+1">Jan 22, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/14.0.0/">
+                <p class="release__version">
+                  14.0.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2016-01-20T00:56:37+0000" data-controller="localized-time" aria-label="Jan 20, 2016, 01:56:37 GMT+1" data-original-label="Jan 20, 2016, 01:56:37 GMT+1">Jan 20, 2016</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/13.1.2/">
+                <p class="release__version">
+                  13.1.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-08-22T22:56:45+0000" data-controller="localized-time" aria-label="Aug 23, 2015, 00:56:45 GMT+2" data-original-label="Aug 23, 2015, 00:56:45 GMT+2">Aug 23, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/13.1.1/">
+                <p class="release__version">
+                  13.1.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-08-20T22:14:40+0000" data-controller="localized-time" aria-label="Aug 21, 2015, 00:14:40 GMT+2" data-original-label="Aug 21, 2015, 00:14:40 GMT+2">Aug 21, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/13.1.0/">
+                <p class="release__version">
+                  13.1.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-07-01T00:32:38+0000" data-controller="localized-time" aria-label="Jul 1, 2015, 02:32:38 GMT+2" data-original-label="Jul 1, 2015, 02:32:38 GMT+2">Jul 1, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/13.0.3/">
+                <p class="release__version">
+                  13.0.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-06-02T01:39:00+0000" data-controller="localized-time" aria-label="Jun 2, 2015, 03:39:00 GMT+2" data-original-label="Jun 2, 2015, 03:39:00 GMT+2">Jun 2, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/13.0.2/">
+                <p class="release__version">
+                  13.0.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-06-02T00:44:34+0000" data-controller="localized-time" aria-label="Jun 2, 2015, 02:44:34 GMT+2" data-original-label="Jun 2, 2015, 02:44:34 GMT+2">Jun 2, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/13.0.1/">
+                <p class="release__version">
+                  13.0.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-05-23T00:48:09+0000" data-controller="localized-time" aria-label="May 23, 2015, 02:48:09 GMT+2" data-original-label="May 23, 2015, 02:48:09 GMT+2">May 23, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/13.0.0/">
+                <p class="release__version">
+                  13.0.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-05-22T04:06:53+0000" data-controller="localized-time" aria-label="May 22, 2015, 06:06:53 GMT+2" data-original-label="May 22, 2015, 06:06:53 GMT+2">May 22, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.1.1/">
+                <p class="release__version">
+                  12.1.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-04-07T11:06:19+0000" data-controller="localized-time" aria-label="Apr 7, 2015, 13:06:19 GMT+2" data-original-label="Apr 7, 2015, 13:06:19 GMT+2">Apr 7, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.1.0/">
+                <p class="release__version">
+                  12.1.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-04-07T05:22:03+0000" data-controller="localized-time" aria-label="Apr 7, 2015, 07:22:03 GMT+2" data-original-label="Apr 7, 2015, 07:22:03 GMT+2">Apr 7, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.0.7/">
+                <p class="release__version">
+                  12.0.7 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-02-05T02:49:21+0000" data-controller="localized-time" aria-label="Feb 5, 2015, 03:49:21 GMT+1" data-original-label="Feb 5, 2015, 03:49:21 GMT+1">Feb 5, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.0.6/">
+                <p class="release__version">
+                  12.0.6 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-01-28T22:44:00+0000" data-controller="localized-time" aria-label="Jan 28, 2015, 23:44:00 GMT+1" data-original-label="Jan 28, 2015, 23:44:00 GMT+1">Jan 28, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.0.5/">
+                <p class="release__version">
+                  12.0.5 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2015-01-03T09:44:02+0000" data-controller="localized-time" aria-label="Jan 3, 2015, 10:44:02 GMT+1" data-original-label="Jan 3, 2015, 10:44:02 GMT+1">Jan 3, 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.0.4/">
+                <p class="release__version">
+                  12.0.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-12-24T02:58:54+0000" data-controller="localized-time" aria-label="Dec 24, 2014, 03:58:54 GMT+1" data-original-label="Dec 24, 2014, 03:58:54 GMT+1">Dec 24, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.0.2/">
+                <p class="release__version">
+                  12.0.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-12-23T13:24:20+0000" data-controller="localized-time" aria-label="Dec 23, 2014, 14:24:20 GMT+1" data-original-label="Dec 23, 2014, 14:24:20 GMT+1">Dec 23, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.0.1/">
+                <p class="release__version">
+                  12.0.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-12-22T23:25:18+0000" data-controller="localized-time" aria-label="Dec 23, 2014, 00:25:18 GMT+1" data-original-label="Dec 23, 2014, 00:25:18 GMT+1">Dec 23, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/12.0/">
+                <p class="release__version">
+                  12.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-12-22T18:15:06+0000" data-controller="localized-time" aria-label="Dec 22, 2014, 19:15:06 GMT+1" data-original-label="Dec 22, 2014, 19:15:06 GMT+1">Dec 22, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.11.6/">
+                <p class="release__version">
+                  1.11.6 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-05-17T02:43:04+0000" data-controller="localized-time" aria-label="May 17, 2014, 04:43:04 GMT+2" data-original-label="May 17, 2014, 04:43:04 GMT+2">May 17, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.11.5/">
+                <p class="release__version">
+                  1.11.5 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-05-03T06:27:10+0000" data-controller="localized-time" aria-label="May 3, 2014, 08:27:10 GMT+2" data-original-label="May 3, 2014, 08:27:10 GMT+2">May 3, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.11.4/">
+                <p class="release__version">
+                  1.11.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-02-21T12:20:12+0000" data-controller="localized-time" aria-label="Feb 21, 2014, 13:20:12 GMT+1" data-original-label="Feb 21, 2014, 13:20:12 GMT+1">Feb 21, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.11.3/">
+                <p class="release__version">
+                  1.11.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-02-21T01:12:53+0000" data-controller="localized-time" aria-label="Feb 21, 2014, 02:12:53 GMT+1" data-original-label="Feb 21, 2014, 02:12:53 GMT+1">Feb 21, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.11.2/">
+                <p class="release__version">
+                  1.11.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-01-26T05:13:33+0000" data-controller="localized-time" aria-label="Jan 26, 2014, 06:13:33 GMT+1" data-original-label="Jan 26, 2014, 06:13:33 GMT+1">Jan 26, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.11.1/">
+                <p class="release__version">
+                  1.11.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-01-21T03:46:10+0000" data-controller="localized-time" aria-label="Jan 21, 2014, 04:46:10 GMT+1" data-original-label="Jan 21, 2014, 04:46:10 GMT+1">Jan 21, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.11/">
+                <p class="release__version">
+                  1.11 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2014-01-02T13:54:30+0000" data-controller="localized-time" aria-label="Jan 2, 2014, 14:54:30 GMT+1" data-original-label="Jan 2, 2014, 14:54:30 GMT+1">Jan 2, 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.10.1/">
+                <p class="release__version">
+                  1.10.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2013-08-08T01:12:17+0000" data-controller="localized-time" aria-label="Aug 8, 2013, 03:12:17 GMT+2" data-original-label="Aug 8, 2013, 03:12:17 GMT+2">Aug 8, 2013</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.10/">
+                <p class="release__version">
+                  1.10 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2013-07-23T21:06:24+0000" data-controller="localized-time" aria-label="Jul 23, 2013, 23:06:24 GMT+2" data-original-label="Jul 23, 2013, 23:06:24 GMT+2">Jul 23, 2013</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.9.1/">
+                <p class="release__version">
+                  1.9.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2013-03-07T23:15:37+0000" data-controller="localized-time" aria-label="Mar 8, 2013, 00:15:37 GMT+1" data-original-label="Mar 8, 2013, 00:15:37 GMT+1">Mar 8, 2013</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.9/">
+                <p class="release__version">
+                  1.9 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2013-03-07T21:39:11+0000" data-controller="localized-time" aria-label="Mar 7, 2013, 22:39:11 GMT+1" data-original-label="Mar 7, 2013, 22:39:11 GMT+1">Mar 7, 2013</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.8.4/">
+                <p class="release__version">
+                  1.8.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-11-25T17:11:11+0000" data-controller="localized-time" aria-label="Nov 25, 2012, 18:11:11 GMT+1" data-original-label="Nov 25, 2012, 18:11:11 GMT+1">Nov 25, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.8.3/">
+                <p class="release__version">
+                  1.8.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-11-21T21:55:30+0000" data-controller="localized-time" aria-label="Nov 21, 2012, 22:55:30 GMT+1" data-original-label="Nov 21, 2012, 22:55:30 GMT+1">Nov 21, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.8.2/">
+                <p class="release__version">
+                  1.8.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-09-06T08:36:37+0000" data-controller="localized-time" aria-label="Sep 6, 2012, 10:36:37 GMT+2" data-original-label="Sep 6, 2012, 10:36:37 GMT+2">Sep 6, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.8.1/">
+                <p class="release__version">
+                  1.8.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-09-03T08:04:52+0000" data-controller="localized-time" aria-label="Sep 3, 2012, 10:04:52 GMT+2" data-original-label="Sep 3, 2012, 10:04:52 GMT+2">Sep 3, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.8/">
+                <p class="release__version">
+                  1.8 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-09-01T20:30:40+0000" data-controller="localized-time" aria-label="Sep 1, 2012, 22:30:40 GMT+2" data-original-label="Sep 1, 2012, 22:30:40 GMT+2">Sep 1, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.7.2/">
+                <p class="release__version">
+                  1.7.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-06-22T16:32:30+0000" data-controller="localized-time" aria-label="Jun 22, 2012, 18:32:30 GMT+2" data-original-label="Jun 22, 2012, 18:32:30 GMT+2">Jun 22, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.7.1.2/">
+                <p class="release__version">
+                  1.7.1.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-02-17T09:58:36+0000" data-controller="localized-time" aria-label="Feb 17, 2012, 10:58:36 GMT+1" data-original-label="Feb 17, 2012, 10:58:36 GMT+1">Feb 17, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.7.1.1/">
+                <p class="release__version">
+                  1.7.1.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-02-16T21:48:54+0000" data-controller="localized-time" aria-label="Feb 16, 2012, 22:48:54 GMT+1" data-original-label="Feb 16, 2012, 22:48:54 GMT+1">Feb 16, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.7.1/">
+                <p class="release__version">
+                  1.7.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2012-02-16T20:46:15+0000" data-controller="localized-time" aria-label="Feb 16, 2012, 21:46:15 GMT+1" data-original-label="Feb 16, 2012, 21:46:15 GMT+1">Feb 16, 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.7/">
+                <p class="release__version">
+                  1.7 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2011-11-30T11:51:49+0000" data-controller="localized-time" aria-label="Nov 30, 2011, 12:51:49 GMT+1" data-original-label="Nov 30, 2011, 12:51:49 GMT+1">Nov 30, 2011</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.6.4/">
+                <p class="release__version">
+                  1.6.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2011-07-21T16:52:16+0000" data-controller="localized-time" aria-label="Jul 21, 2011, 18:52:16 GMT+2" data-original-label="Jul 21, 2011, 18:52:16 GMT+2">Jul 21, 2011</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.6.3/">
+                <p class="release__version">
+                  1.6.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2011-07-16T16:33:18+0000" data-controller="localized-time" aria-label="Jul 16, 2011, 18:33:18 GMT+2" data-original-label="Jul 16, 2011, 18:33:18 GMT+2">Jul 16, 2011</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.6.2/">
+                <p class="release__version">
+                  1.6.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2011-07-16T15:07:02+0000" data-controller="localized-time" aria-label="Jul 16, 2011, 17:07:02 GMT+2" data-original-label="Jul 16, 2011, 17:07:02 GMT+2">Jul 16, 2011</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.6.1/">
+                <p class="release__version">
+                  1.6.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2011-04-30T21:33:53+0000" data-controller="localized-time" aria-label="Apr 30, 2011, 23:33:53 GMT+2" data-original-label="Apr 30, 2011, 23:33:53 GMT+2">Apr 30, 2011</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.6/">
+                <p class="release__version">
+                  1.6 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2011-04-04T18:01:50+0000" data-controller="localized-time" aria-label="Apr 4, 2011, 20:01:50 GMT+2" data-original-label="Apr 4, 2011, 20:01:50 GMT+2">Apr 4, 2011</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.5.2/">
+                <p class="release__version">
+                  1.5.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2011-03-12T20:27:11+0000" data-controller="localized-time" aria-label="Mar 12, 2011, 21:27:11 GMT+1" data-original-label="Mar 12, 2011, 21:27:11 GMT+1">Mar 12, 2011</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.5.1/">
+                <p class="release__version">
+                  1.5.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2010-09-19T22:37:28+0000" data-controller="localized-time" aria-label="Sep 20, 2010, 00:37:28 GMT+2" data-original-label="Sep 20, 2010, 00:37:28 GMT+2">Sep 20, 2010</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.5/">
+                <p class="release__version">
+                  1.5 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2010-09-14T16:45:37+0000" data-controller="localized-time" aria-label="Sep 14, 2010, 18:45:37 GMT+2" data-original-label="Sep 14, 2010, 18:45:37 GMT+2">Sep 14, 2010</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.9/">
+                <p class="release__version">
+                  1.4.9 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2010-05-27T21:59:52+0000" data-controller="localized-time" aria-label="May 27, 2010, 23:59:52 GMT+2" data-original-label="May 27, 2010, 23:59:52 GMT+2">May 27, 2010</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.8/">
+                <p class="release__version">
+                  1.4.8 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2010-04-22T08:01:45+0000" data-controller="localized-time" aria-label="Apr 22, 2010, 10:01:45 GMT+2" data-original-label="Apr 22, 2010, 10:01:45 GMT+2">Apr 22, 2010</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.7/">
+                <p class="release__version">
+                  1.4.7 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2010-04-16T20:20:46+0000" data-controller="localized-time" aria-label="Apr 16, 2010, 22:20:46 GMT+2" data-original-label="Apr 16, 2010, 22:20:46 GMT+2">Apr 16, 2010</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.6/">
+                <p class="release__version">
+                  1.4.6 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2010-03-31T22:07:23+0000" data-controller="localized-time" aria-label="Apr 1, 2010, 00:07:23 GMT+2" data-original-label="Apr 1, 2010, 00:07:23 GMT+2">Apr 1, 2010</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.5/">
+                <p class="release__version">
+                  1.4.5 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2010-01-21T18:30:02+0000" data-controller="localized-time" aria-label="Jan 21, 2010, 19:30:02 GMT+1" data-original-label="Jan 21, 2010, 19:30:02 GMT+1">Jan 21, 2010</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.4/">
+                <p class="release__version">
+                  1.4.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2010-01-18T20:45:47+0000" data-controller="localized-time" aria-label="Jan 18, 2010, 21:45:47 GMT+1" data-original-label="Jan 18, 2010, 21:45:47 GMT+1">Jan 18, 2010</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.3/">
+                <p class="release__version">
+                  1.4.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2009-11-20T16:37:50+0000" data-controller="localized-time" aria-label="Nov 20, 2009, 17:37:50 GMT+1" data-original-label="Nov 20, 2009, 17:37:50 GMT+1">Nov 20, 2009</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.2/">
+                <p class="release__version">
+                  1.4.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2009-11-10T18:29:18+0000" data-controller="localized-time" aria-label="Nov 10, 2009, 19:29:18 GMT+1" data-original-label="Nov 10, 2009, 19:29:18 GMT+1">Nov 10, 2009</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4.1/">
+                <p class="release__version">
+                  1.4.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2009-11-10T15:30:12+0000" data-controller="localized-time" aria-label="Nov 10, 2009, 16:30:12 GMT+1" data-original-label="Nov 10, 2009, 16:30:12 GMT+1">Nov 10, 2009</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4/">
+                <p class="release__version">
+                  1.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2009-11-06T23:24:16+0000" data-controller="localized-time" aria-label="Nov 7, 2009, 00:24:16 GMT+1" data-original-label="Nov 7, 2009, 00:24:16 GMT+1">Nov 7, 2009</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.4rc1/">
+                <p class="release__version">
+                  1.4rc1 <span class="badge badge--warning release__version-badge">pre-release</span>
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2009-11-03T01:27:53+0000" data-controller="localized-time" aria-label="Nov 3, 2009, 02:27:53 GMT+1" data-original-label="Nov 3, 2009, 02:27:53 GMT+1">Nov 3, 2009</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.3.4/">
+                <p class="release__version">
+                  1.3.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2009-10-02T06:29:54+0000" data-controller="localized-time" aria-label="Oct 2, 2009, 08:29:54 GMT+2" data-original-label="Oct 2, 2009, 08:29:54 GMT+2">Oct 2, 2009</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.3.3/">
+                <p class="release__version">
+                  1.3.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2009-03-12T18:23:10+0000" data-controller="localized-time" aria-label="Mar 12, 2009, 19:23:10 GMT+1" data-original-label="Mar 12, 2009, 19:23:10 GMT+1">Mar 12, 2009</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.3.2/">
+                <p class="release__version">
+                  1.3.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2008-12-17T23:27:42+0000" data-controller="localized-time" aria-label="Dec 18, 2008, 00:27:42 GMT+1" data-original-label="Dec 18, 2008, 00:27:42 GMT+1">Dec 18, 2008</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.3.1/">
+                <p class="release__version">
+                  1.3.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2008-11-25T02:28:45+0000" data-controller="localized-time" aria-label="Nov 25, 2008, 03:28:45 GMT+1" data-original-label="Nov 25, 2008, 03:28:45 GMT+1">Nov 25, 2008</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.3/">
+                <p class="release__version">
+                  1.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2008-09-24T21:16:38+0000" data-controller="localized-time" aria-label="Sep 24, 2008, 23:16:38 GMT+2" data-original-label="Sep 24, 2008, 23:16:38 GMT+2">Sep 24, 2008</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.2/">
+                <p class="release__version">
+                  1.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2008-08-29T16:24:58+0000" data-controller="localized-time" aria-label="Aug 29, 2008, 18:24:58 GMT+2" data-original-label="Aug 29, 2008, 18:24:58 GMT+2">Aug 29, 2008</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.1/">
+                <p class="release__version">
+                  1.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2008-05-20T21:23:25+0000" data-controller="localized-time" aria-label="May 20, 2008, 23:23:25 GMT+2" data-original-label="May 20, 2008, 23:23:25 GMT+2">May 20, 2008</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/1.0/">
+                <p class="release__version">
+                  1.0 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2008-01-08T17:09:51+0000" data-controller="localized-time" aria-label="Jan 8, 2008, 18:09:51 GMT+1" data-original-label="Jan 8, 2008, 18:09:51 GMT+1">Jan 8, 2008</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/0.9.2/">
+                <p class="release__version">
+                  0.9.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2007-11-10T18:30:12+0000" data-controller="localized-time" aria-label="Nov 10, 2007, 19:30:12 GMT+1" data-original-label="Nov 10, 2007, 19:30:12 GMT+1">Nov 10, 2007</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/0.9.1/">
+                <p class="release__version">
+                  0.9.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2007-10-18T00:07:31+0000" data-controller="localized-time" aria-label="Oct 18, 2007, 02:07:31 GMT+2" data-original-label="Oct 18, 2007, 02:07:31 GMT+2">Oct 18, 2007</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/0.9/">
+                <p class="release__version">
+                  0.9 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2007-10-10T14:28:08+0000" data-controller="localized-time" aria-label="Oct 10, 2007, 16:28:08 GMT+2" data-original-label="Oct 10, 2007, 16:28:08 GMT+2">Oct 10, 2007</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/0.8.4/">
+                <p class="release__version">
+                  0.8.4 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2007-09-20T19:22:31+0000" data-controller="localized-time" aria-label="Sep 20, 2007, 21:22:31 GMT+2" data-original-label="Sep 20, 2007, 21:22:31 GMT+2">Sep 20, 2007</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/0.8.3/">
+                <p class="release__version">
+                  0.8.3 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2007-09-19T02:48:39+0000" data-controller="localized-time" aria-label="Sep 19, 2007, 04:48:39 GMT+2" data-original-label="Sep 19, 2007, 04:48:39 GMT+2">Sep 19, 2007</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/0.8.2/">
+                <p class="release__version">
+                  0.8.2 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2007-09-18T21:04:13+0000" data-controller="localized-time" aria-label="Sep 18, 2007, 23:04:13 GMT+2" data-original-label="Sep 18, 2007, 23:04:13 GMT+2">Sep 18, 2007</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/0.8.1/">
+                <p class="release__version">
+                  0.8.1 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2007-09-15T04:34:02+0000" data-controller="localized-time" aria-label="Sep 15, 2007, 06:34:02 GMT+2" data-original-label="Sep 15, 2007, 06:34:02 GMT+2">Sep 15, 2007</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release release--oldest">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/virtualenv/0.8/">
+                <p class="release__version">
+                  0.8 
+                </p>
+                <p class="release__version-date">
+                  <time class="tooltipped tooltipped-s -js-relative-time" datetime="2007-09-14T23:31:52+0000" data-controller="localized-time" aria-label="Sep 15, 2007, 01:31:52 GMT+2" data-original-label="Sep 15, 2007, 01:31:52 GMT+2">Sep 15, 2007</time>
+                </p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+
+        
+          
+          <div id="files" data-target="project-tabs.content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="files-tab mobile-files-tab" style="display: none;">
+            <h2 class="page-title">Download files</h2>
+            <p>Download the file for your platform. If you're not sure which to choose, learn more about <a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">installing packages</a>.</p>
+
+            <table class="table table--downloads">
+              <caption class="sr-only">Files for virtualenv, version 16.7.5</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Filename, size</th>
+                  <th scope="col">File type</th>
+                  <th scope="col">Python version</th>
+                  <th scope="col">Upload date</th>
+                  <th scope="col" class="table__align-right">Hashes</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <th scope="row">
+                    <span class="table__mobile-label">Filename, size</span>
+                    <a href="https://files.pythonhosted.org/packages/8b/12/8d4f45b8962b03ac9efefe5ed5053f6b29334d83e438b4fe379d21c0cb8e/virtualenv-16.7.5-py2.py3-none-any.whl">
+                      virtualenv-16.7.5-py2.py3-none-any.whl
+                    </a>
+                     (3.3 MB)
+                  </th>
+                  <td>
+                    <span class="table__mobile-label">File type</span>
+                    Wheel
+                  </td>
+                  <td>
+                    <span class="table__mobile-label">Python version</span>
+                    
+                      py2.py3
+                    
+                  </td>
+                  <td>
+                    <span class="table__mobile-label">Upload date</span>
+                    <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-09-03T16:44:19+0000" data-controller="localized-time" aria-label="Sep 3, 2019, 18:44:19 GMT+2" data-original-label="Sep 3, 2019, 18:44:19 GMT+2">Sep 3, 2019</time>
+                  </td>
+                  <td class="table__align-right">
+                    <span class="table__mobile-label table__mobile-label--hashes">Hashes</span>
+                    <a href="#copy-hash-modal-44e8cdf8-e4a6-4580-ac11-b3b59b337116" class="button button--small button--primary">View <span>hashes</span></a>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">
+                    <span class="table__mobile-label">Filename, size</span>
+                    <a href="https://files.pythonhosted.org/packages/66/f0/6867af06d2e2f511e4e1d7094ff663acdebc4f15d4a0cb0fed1007395124/virtualenv-16.7.5.tar.gz">
+                      virtualenv-16.7.5.tar.gz
+                    </a>
+                     (5.1 MB)
+                  </th>
+                  <td>
+                    <span class="table__mobile-label">File type</span>
+                    Source
+                  </td>
+                  <td>
+                    <span class="table__mobile-label">Python version</span>
+                    
+                      None
+                    
+                  </td>
+                  <td>
+                    <span class="table__mobile-label">Upload date</span>
+                    <time class="tooltipped tooltipped-s -js-relative-time" datetime="2019-09-03T16:44:22+0000" data-controller="localized-time" aria-label="Sep 3, 2019, 18:44:22 GMT+2" data-original-label="Sep 3, 2019, 18:44:22 GMT+2">Sep 3, 2019</time>
+                  </td>
+                  <td class="table__align-right">
+                    <span class="table__mobile-label table__mobile-label--hashes">Hashes</span>
+                    <a href="#copy-hash-modal-e531c967-5d38-4090-9722-0761458ab2ed" class="button button--small button--primary">View <span>hashes</span></a>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+          
+          <div id="copy-hash-modal-44e8cdf8-e4a6-4580-ac11-b3b59b337116" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/reference/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for virtualenv-16.7.5-py2.py3-none-any.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for virtualenv-16.7.5-py2.py3-none-any.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>680af46846662bb38c5504b78bad9ed9e4f3ba2d54f54ba42494fdf94337fe30</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small -js-copy-hash tooltipped tooltipped-w" aria-label="Copy to clipboard" data-original-label="Copy to clipboard" data-clipboard-text="680af46846662bb38c5504b78bad9ed9e4f3ba2d54f54ba42494fdf94337fe30">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>6853cd625c39fc38d6965cd04d29b9bc</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small -js-copy-hash tooltipped tooltipped-w" aria-label="Copy to clipboard" data-original-label="Copy to clipboard" data-clipboard-text="6853cd625c39fc38d6965cd04d29b9bc">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2-256</th>
+            <td><code>8b128d4f45b8962b03ac9efefe5ed5053f6b29334d83e438b4fe379d21c0cb8e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small -js-copy-hash tooltipped tooltipped-w" aria-label="Copy to clipboard" data-original-label="Copy to clipboard" data-clipboard-text="8b128d4f45b8962b03ac9efefe5ed5053f6b29334d83e438b4fe379d21c0cb8e">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-e531c967-5d38-4090-9722-0761458ab2ed" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/reference/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for virtualenv-16.7.5.tar.gz
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for virtualenv-16.7.5.tar.gz</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>f78d81b62d3147396ac33fc9d77579ddc42cc2a98dd9ea38886f616b33bc7fb2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small -js-copy-hash tooltipped tooltipped-w" aria-label="Copy to clipboard" data-original-label="Copy to clipboard" data-clipboard-text="f78d81b62d3147396ac33fc9d77579ddc42cc2a98dd9ea38886f616b33bc7fb2">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>9feca7d802b9790c240d2ed24d682026</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small -js-copy-hash tooltipped tooltipped-w" aria-label="Copy to clipboard" data-original-label="Copy to clipboard" data-clipboard-text="9feca7d802b9790c240d2ed24d682026">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2-256</th>
+            <td><code>66f06867af06d2e2f511e4e1d7094ff663acdebc4f15d4a0cb0fed1007395124</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small -js-copy-hash tooltipped tooltipped-w" aria-label="Copy to clipboard" data-original-label="Copy to clipboard" data-clipboard-text="66f06867af06d2e2f511e4e1d7094ff663acdebc4f15d4a0cb0fed1007395124">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="/static/images/white-cube.8c3a6fe9.svg" alt="" class="-js-white-cube">
+      </div>
+
+      <div class="footer__menus">
+        <div class="footer__menu">
+          <h2>Help</h2>
+          <nav aria-label="Help navigation">
+            <ul>
+              <li><a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">Installing packages</a></li>
+              <li><a href="https://packaging.python.org/tutorials/packaging-projects/" title="External link" target="_blank" rel="noopener">Uploading packages</a></li>
+              <li><a href="https://packaging.python.org/" title="External link" target="_blank" rel="noopener">User guide</a></li>
+              <li><a href="/help/">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>About PyPI</h2>
+          <nav aria-label="About PyPI navigation">
+            <ul>
+              <li><a href="https://twitter.com/PyPI" title="External link" target="_blank" rel="noopener">PyPI on Twitter</a></li>
+              <li><a href="https://dtdg.co/pypi" title="External link" target="_blank" rel="noopener">Infrastructure dashboard</a></li>
+              <li><a href="https://www.python.org/dev/peps/pep-0541/" title="External link" target="_blank" rel="noopener">Package index name retention</a></li>
+              <li><a href="/sponsors/">Our sponsors</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Contributing to PyPI</h2>
+          <nav aria-label="How to contribute navigation">
+            <ul>
+              <li><a href="/help/#feedback">Bugs and feedback</a></li>
+              <li><a href="https://github.com/pypa/warehouse" title="External link" target="_blank" rel="noopener">Contribute on GitHub</a></li>
+              <li><a href="https://github.com/pypa/warehouse/graphs/contributors" title="External link" target="_blank" rel="noopener">Development credits</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Using PyPI</h2>
+          <nav aria-label="Using PyPI navigation">
+            <ul>
+              <li><a href="https://www.pypa.io/en/latest/code-of-conduct/" title="External link" target="_blank" rel="noopener">Code of conduct</a></li>
+              <li><a href="/security/">Report security issue</a></li>
+              <li><a href="https://www.python.org/privacy/" title="External link" target="_blank" rel="noopener">Privacy policy</a></li>
+              <li><a href="/policy/terms-of-use/">Terms of use</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__text">
+        
+        <p>Status: <a href="https://status.python.org/" title="External link" target="_blank" rel="noopener">
+          <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">All Systems Operational</span></a>
+        </p>
+        
+        <p>
+          Developed and maintained by the Python community, for the Python community.
+          <br>
+          <a href="https://donate.pypi.org">Donate today!</a>
+        </p>
+        <p>© 2019 <a href="https://www.python.org/psf/" title="External link" target="_blank" rel="noopener">Python Software Foundation</a><br>
+          <a href="/sitemap/">Site map</a>
+        </p>
+      </div>
+
+      <div class="centered hide-on-desktop">
+        <button type="button" class="button button--switch-to-desktop" data-target="viewport-toggle.switchToDesktop" data-action="viewport-toggle#switchToDesktop">
+          Switch to desktop version
+        </button>
+      </div>
+    </footer>
+
+    
+
+<div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.elastic.co/">
+        <img class="sponsors__image" alt="Elastic" src="/static/images/sponsors/white/elastic.a912fb87.png">
+        <span class="sponsors__name">Elastic</span>
+        <span class="sponsors__service">Search</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.pingdom.com/">
+        <img class="sponsors__image" alt="Pingdom" src="/static/images/sponsors/white/pingdom.07446398.png">
+        <span class="sponsors__name">Pingdom</span>
+        <span class="sponsors__service">Monitoring</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://cloud.google.com/">
+        <img class="sponsors__image" alt="Google" src="/static/images/sponsors/white/google.2f72f26f.png">
+        <span class="sponsors__name">Google</span>
+        <span class="sponsors__service">BigQuery</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://getsentry.com/for/python">
+        <img class="sponsors__image" alt="Sentry" src="/static/images/sponsors/white/sentry.5ab437bc.png">
+        <span class="sponsors__name">Sentry</span>
+        <span class="sponsors__service">Error logging</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://aws.amazon.com/">
+        <img class="sponsors__image" alt="AWS" src="/static/images/sponsors/white/aws.5f800271.png">
+        <span class="sponsors__name">AWS</span>
+        <span class="sponsors__service">Cloud computing</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.datadoghq.com/">
+        <img class="sponsors__image" alt="DataDog" src="/static/images/sponsors/white/datadog.e569d741.png">
+        <span class="sponsors__name">DataDog</span>
+        <span class="sponsors__service">Monitoring</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.fastly.com/">
+        <img class="sponsors__image" alt="Fastly" src="/static/images/sponsors/white/fastly.0563c6f5.png">
+        <span class="sponsors__name">Fastly</span>
+        <span class="sponsors__service">CDN</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.signalfx.com/">
+        <img class="sponsors__image" alt="SignalFx" src="/static/images/sponsors/white/signalfx.560cb5c4.png">
+        <span class="sponsors__name">SignalFx</span>
+        <span class="sponsors__service">Supporter</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.digicert.com/">
+        <img class="sponsors__image" alt="DigiCert" src="/static/images/sponsors/white/digicert.79748718.png">
+        <span class="sponsors__name">DigiCert</span>
+        <span class="sponsors__service">EV certificate</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://statuspage.io">
+        <img class="sponsors__image" alt="StatusPage" src="/static/images/sponsors/white/statuspage.67af0b3d.png">
+        <span class="sponsors__name">StatusPage</span>
+        <span class="sponsors__service">Status page</span>
+      </a>
+    
+  
+</div>
+
+    
+  
+
+</body></html>
