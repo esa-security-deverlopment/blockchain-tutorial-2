@@ -1,0 +1,66 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven Bundle Plugin
+Built-By: mohammeddavoodi
+Build-Jdk: 1.8.0_112
+Atlassian-Build-Date: 2019-07-22T10:39:08-0700
+Bnd-LastModified: 1563817151080
+Bundle-Description: A post-receive/merge webhook that fires a GET on a
+  remote Jenkins URL.
+Bundle-DocURL: https://www.mohami.io
+Bundle-ManifestVersion: 2
+Bundle-Name: Webhook to Jenkins for Bitbucket Server
+Bundle-SymbolicName: com.nerdwin15.stash.webhook-jenkins
+Bundle-Vendor: Mohami
+Bundle-Version: 5.2.9
+Import-Package: com.atlassian.bitbucket;resolution:=optional,com.atlas
+ sian.bitbucket.auth;resolution:=optional,com.atlassian.bitbucket.even
+ t;resolution:=optional,com.atlassian.bitbucket.event.mirror;resolutio
+ n:=optional,com.atlassian.bitbucket.event.pull;resolution:=optional,c
+ om.atlassian.bitbucket.event.repository;resolution:=optional,com.atla
+ ssian.bitbucket.hook.repository;resolution:=optional,com.atlassian.bi
+ tbucket.i18n;resolution:=optional,com.atlassian.bitbucket.io;resoluti
+ on:=optional,com.atlassian.bitbucket.nav;resolution:=optional,com.atl
+ assian.bitbucket.permission;resolution:=optional,com.atlassian.bitbuc
+ ket.project;resolution:=optional,com.atlassian.bitbucket.pull;resolut
+ ion:=optional,com.atlassian.bitbucket.repository;resolution:=optional
+ ,com.atlassian.bitbucket.rest;resolution:=optional,com.atlassian.bitb
+ ucket.rest.exception;resolution:=optional,com.atlassian.bitbucket.scm
+ ;resolution:=optional,com.atlassian.bitbucket.scm.http;resolution:=op
+ tional,com.atlassian.bitbucket.scm.ssh;resolution:=optional,com.atlas
+ sian.bitbucket.scope;resolution:=optional,com.atlassian.bitbucket.ser
+ ver;resolution:=optional,com.atlassian.bitbucket.setting;resolution:=
+ optional,com.atlassian.bitbucket.ssh;resolution:=optional,com.atlassi
+ an.bitbucket.user;resolution:=optional,com.atlassian.bitbucket.util;r
+ esolution:=optional,com.atlassian.bitbucket.util.concurrent;resolutio
+ n:=optional,com.atlassian.bitbucket.validation;resolution:=optional,c
+ om.atlassian.event.api;resolution:=optional,com.atlassian.plugins.res
+ t.common.security;resolution:=optional,com.atlassian.sal.api.message;
+ resolution:=optional,com.atlassian.sal.api.transaction;resolution:=op
+ tional,com.atlassian.sal.api.upgrade;resolution:=optional,com.atlassi
+ an.support.tools.spi;resolution:=optional,com.atlassian.upm.api.licen
+ se;resolution:=optional,com.atlassian.upm.api.license.entity;resoluti
+ on:=optional,com.atlassian.upm.api.util;resolution:=optional,com.atla
+ ssian.util.concurrent;resolution:=optional,com.google.common.base;res
+ olution:=optional,com.google.common.collect;resolution:=optional,com.
+ google.common.io;resolution:=optional,com.sun.jersey.spi.resource;res
+ olution:=optional,javax.annotation;resolution:=optional,javax.net.ssl
+ ;resolution:=optional,javax.servlet;resolution:=optional,javax.servle
+ t.http;resolution:=optional,javax.ws.rs;resolution:=optional,javax.ws
+ .rs.core;resolution:=optional,javax.ws.rs.ext;resolution:=optional,ja
+ vax.xml.bind.annotation;resolution:=optional,org.apache.commons.io;re
+ solution:=optional,org.apache.commons.lang3.tuple;resolution:=optiona
+ l,org.apache.commons.logging;resolution:=optional,org.apache.http;res
+ olution:=optional,org.apache.http.client.methods;resolution:=optional
+ ,org.apache.http.config;resolution:=optional,org.apache.http.conn;res
+ olution:=optional,org.apache.http.conn.socket;resolution:=optional,or
+ g.apache.http.conn.ssl;resolution:=optional,org.apache.http.entity;re
+ solution:=optional,org.apache.http.impl.client;resolution:=optional,o
+ rg.apache.http.impl.conn;resolution:=optional,org.apache.http.message
+ ;resolution:=optional,org.codehaus.jackson.annotate;resolution:=optio
+ nal,org.codehaus.jackson.map;resolution:=optional,org.slf4j;resolutio
+ n:=optional,org.springframework.beans.factory;resolution:=optional,or
+ g.springframework.util;resolution:=optional
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.5.0.201709291849
+

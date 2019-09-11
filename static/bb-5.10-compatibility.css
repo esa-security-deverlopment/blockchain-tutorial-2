@@ -1,0 +1,8 @@
+#multi-user-select .adg2-react-select.Select .Select-control {
+    border-color: #ccc;
+}
+#multi-user-select .adg2-react-select.Select .Select-control:hover {
+    border-color: #999;
+    color: #000;
+    cursor: pointer;
+}

@@ -1,0 +1,371 @@
+{namespace com.nerdwin15.stash.webhook}
+
+/**
+ * @param config
+ * @param scope
+ * @param? errors
+ */
+{template .formContents}
+    <div class="jenkins-hook-form-inner">
+        <h3 class="instance-list-header">{getText('stash.webhook.jenkins.instances.label')}</h3>
+
+        <button class="aui-button" id="addInstanceButton">{getText('stash.webhook.jenkins.add.another.instance')}</button>
+
+        <div id='jenkinsInstances'>
+            {call com.nerdwin15.stash.webhook.renderInstances data="all"/}
+        </div>
+
+        <h3>{getText('stash.webhook.common.settings.label')}</h3>
+
+        {call widget.aui.form.checkbox}
+            {param id: 'ignoreCerts' /}
+            {param checked: $config['ignoreCerts'] /}
+            {param labelContent}
+                {getText('stash.webhook.ignoreCerts.label')}
+            {/param}
+            {param labelHtml}
+                {getText('stash.webhook.ignoreCerts.label')}
+            {/param}
+            {param description: getText('stash.webhook.ignoreCerts.description') /}
+        {/call}
+
+        {call widget.aui.form.checkbox}
+            {param id: 'omitHashCode' /}
+            {param checked: $config['omitHashCode'] /}
+            {param labelContent}
+                {getText('stash.webhook.omitHashCode.label')}
+            {/param}
+            {param labelHtml}
+                {getText('stash.webhook.omitHashCode.label')}
+            {/param}
+            {param description: getText('stash.webhook.omitHashCode.description') /}
+        {/call}
+
+        {call widget.aui.form.checkbox}
+            {param id: 'omitBranchName' /}
+            {param checked: $config['omitBranchName'] /}
+            {param labelContent}
+                {getText('stash.webhook.omitBranchName.label')}
+            {/param}
+            {param labelHtml}
+                {getText('stash.webhook.omitBranchName.label')}
+            {/param}
+            {param description: getText('stash.webhook.omitBranchName.description') /}
+        {/call}
+
+        {call widget.aui.form.checkbox}
+                {param id: 'omitTriggerBuildButton' /}
+                {param checked: $config['omitTriggerBuildButton'] /}
+                {param labelContent}
+                    {getText('stash.webhook.omitTriggerBuildButton.label')}
+                {/param}
+                {param labelHtml}
+                    {getText('stash.webhook.omitTriggerBuildButton.label')}
+                {/param}
+                {param description: getText('stash.webhook.omitTriggerBuildButton.description') /}
+        {/call}
+
+        {call widget.aui.form.field}
+            {param id: 'test-form' /}
+            {param labelContent: getText('stash.webhook.test') /}
+            {param labelHtml: getText('stash.webhook.test') /}
+            {{param description: getText('stash.webhook.test.description') /}}
+            {param input}
+                {call widget.aui.form.button}
+                    {param id: 'testButton' /}
+                    {param label: getText('stash.webhook.test.button.label') /}
+                    {param tooltip: getText('stash.webhook.test.button.tooltip') /}
+                {/call}
+                <span class="jenkins-spinner" style="display:none;"></span>
+                <span class="status-wrapper">
+                    <span class="status"></span>
+                </span>
+            {/param}
+        {/call}
+
+        <div class="field-group">
+            <div class='status-container'></div>
+        </div>
+
+        <hr />
+
+        <h3>{getText('stash.webhook.advancedConfiguration.label')}</h3>
+
+
+        <div class="field-group">
+            <label for="multi-user-select">{getText('stash.webhook.ignoreCommitters.label')}</label>
+            <div id='multi-user-select' {if $config['ignoreCommitters']} data-users="{$config['ignoreCommitters']}"{/if} {if $config['ignoreAccessKeys']} data-access-keys="{$config['ignoreAccessKeys']}"{/if}></div>
+
+            <div class="description">
+                {getText('stash.webhook.ignoreCommitters.description')}
+            </div>
+            {if $errors and $errors['ignoreCommitters']}
+                <div class="error">{$errors['ignoreCommitters']|noAutoescape}</div>
+            {/if}
+        </div>
+
+        <div class="field-group">
+            <label for="branchOptions">{getText('stash.webhook.repo.branchOptions.label')}</label>
+            <select class="select" id="branchOptions" name="branchOptions" style="max-width: 130px">
+                <option value="" {($config['branchOptions'] == null) ? 'selected="selected"' : ''}>Build all</option>
+                <option value="whitelist" {($config['branchOptions'] == 'whitelist') ? 'selected="selected"' : ''}>Build from:</option>
+                <option value="blacklist" {($config['branchOptions'] == 'blacklist') ? 'selected="selected"' : ''}>Ignore from:</option>
+                <option value="whitelistRegExp" {($config['branchOptions'] == 'whitelistRegExp') ? 'selected="selected"' : ''}>Build RegExp:</option>
+                <option value="blacklistRegExp" {($config['branchOptions'] == 'blacklistRegExp') ? 'selected="selected"' : ''}>Ignore RegExp:</option>
+            </select>
+            &nbsp;
+            <input  id="branchOptionsBranches" style="max-width: 367px" class="text" type="text" name="branchOptionsBranches" value="{($config['branchOptionsBranches'] != null) ? $config['branchOptionsBranches'] : ''}"/>
+            <div class="description">
+                {getText('stash.webhook.repo.branchOptions.description')}
+            </div>
+            {if $errors and $errors['branchOptions']}
+                    <div class="error">{$errors['branchOptions']|noAutoescape}</div>
+            {/if}
+            {if $errors and $errors['branchOptionsBranches']}
+                <div class="error">{$errors['branchOptionsBranches']|noAutoescape}</div>
+            {/if}
+        </div>
+
+        <div class="field-group">
+            <label for="event-selector">{getText('stash.webhook.repo.event.selector.label')}</label>
+            {call .eventSelector}
+                {param value: $config['disabledEvents'] /}
+            {/call}
+        </div>
+
+        {call widget.aui.form.checkbox}
+            {param id: 'doNotCheckMergability' /}
+            {param checked: $config['doNotCheckMergability'] /}
+            {param labelContent}
+                {getText('stash.webhook.do.not.check.mergability.label')}
+            {/param}
+            {param descriptionContent}
+                <div>{getText('stash.webhook.do.not.check.mergability.description')}</div>
+                <a href="https://mohamicorp.atlassian.net/wiki/spaces/DOC/pages/765034497/Skipping+merge+check">
+                    {getText('stash.webhook.more.details')}
+                </a>
+            {/param}
+        {/call}
+
+        {call widget.aui.form.checkbox}
+            {param id: 'triggerPollForDeletedBranch' /}
+            {param checked: $config['triggerPollForDeletedBranch'] /}
+            {param labelContent}
+                {getText('stash.webhook.trigger.poll.for.deleted.branch.label')}
+            {/param}
+            {param descriptionContent}
+                <div>{getText('stash.webhook.trigger.poll.for.deleted.branch.description')}</div>
+            {/param}
+        {/call}
+
+        <div id="urlParametersDiv">
+            <h3>{getText('stash.webhook.jenkins.url.parameters.title')}</h3>
+            <div class="field-group">
+                <label for="urlParameters">{getText('stash.webhook.jenkins.url.parameters.label')}</label>
+                <textarea class="textarea" name="urlParameters" id="urlParameters" placeholder="TARGET_BRANCH='{'BRANCH'}'">{if $config['urlParameters']}{$config['urlParameters']}{/if}</textarea>
+                <div class="description">
+                    {getText('stash.webhook.jenkins.url.parameters.decription', 'https://mohamicorp.atlassian.net/wiki/spaces/DOC/pages/210305025/Sending+URL+Parameters+to+Jenkins')|noAutoescape}
+                </div>
+                {if $errors and $errors['urlParameters']}
+                    <div class="error">{$errors['urlParameters']|noAutoescape}</div>
+                {/if}
+            </div>
+        </div>
+        <script>
+            require('plugin/jenkins/settings-form').onReady();
+        </script>
+    <div>
+{/template}
+
+/**
+ * @param results
+ * @param isRepositoryScope
+ */
+{template .testResults}
+    {if $results and length($results)}
+        <table>
+            {foreach $result in $results}
+                <tr>
+                    {if not $isRepositoryScope}
+                        <td class="repo-name truncated" title="{$result.repositoryKey}">{$result.repositoryKey}</td>
+                    {/if}
+                    <td class="jenkins-base-url truncated" title="{$result.jenkinsBase}">
+                        {if $result.jenkinsBase}{$result.jenkinsBase}{else}url not specified{/if}
+                    </td>
+                    <td class="response-icon">
+                        {call .resultIcon}
+                            {param result:$result/}
+                        {/call}
+                    <td>
+                        {call .resultMessage}
+                            {param result:$result/}
+                        {/call}
+                    </td>
+                </tr>
+            {/foreach}
+        </table>
+    {else}
+        <div class="jenkins-error">{getText('stash.webhook.warning.no.repositories')}</div>
+    {/if}
+{/template}
+
+/**
+ * @param result
+ */
+{template .testResult}
+    {call .resultIcon}
+        {param result:$result/}
+    {/call}
+
+    {call .resultMessage}
+        {param result:$result/}
+    {/call}
+{/template}
+
+/**
+ * @param result
+ */
+{template .resultIcon}
+    <span class="aui-icon aui-icon-small {if $result.successful} aui-iconfont-approve jenkins-ok {else} aui-iconfont-error jenkins-error{/if}" title="{$result.message}">
+        {$result.message}
+    </span>
+{/template}
+
+/**
+ * @param result
+ */
+{template .resultMessage}
+    <span class="truncated jenkins-response {if $result.successful} jenkins-ok {else} jenkins-error {/if}" title="{$result.message}">
+        {$result.message}
+    </span>
+{/template}
+
+
+/**
+ * @param displayAddButton
+ * @param scope
+ * @param jenkinsBaseName
+ * @param jenkinsBaseValue
+ * @param jenkinsBaseError
+ * @param cloneTypeName
+ * @param cloneTypeValue
+ * @param cloneTypeError
+ * @param cloneUrlName
+ * @param cloneUrlValue
+ * @param cloneUrlError
+ * @param jenkinsEndPointTypeName
+ * @param jenkinsEndPointTypeValue
+ * @param mirrorServerIdName
+ * @param mirrorServerIdValue
+ * @param mirrorCloneUrlName
+ * @param mirrorCloneUrlValue
+ */
+{template .instanceFields}
+    <div class="instance-settings-wrap">
+        <div class="field-group jenkins-base">
+            <label for="{$jenkinsBaseName}">{getText('stash.webhook.jenkins.url.label')}<span class="aui-icon icon-required">required</span></label>
+            <input class="text long" type="text" id="{$jenkinsBaseName}" name="{$jenkinsBaseName}" title="{getText('stash.webhook.jenkins.url.label')}" value="{if $jenkinsBaseValue}{$jenkinsBaseValue}{/if}">
+            <a href="#">
+                <span class="aui-icon aui-icon-small aui-iconfont-close-dialog remove-instance" title="{getText('stash.webhook.remove.instance.settings.label')}">
+                    {getText('stash.webhook.remove.instance.settings.label')}
+                </span>
+            </a>
+            <div class="description">{getText('stash.webhook.jenkins.url.description')}</div>
+            {if $jenkinsBaseError}
+                <div class="error">{$jenkinsBaseError|noAutoescape}</div>
+            {/if}
+        </div>
+
+        <div class="field-group">
+            <label for="{$jenkinsEndPointTypeName}">{getText('stash.webhook.repo.end.point.type.label')}</label>
+            <select class="select jenkins-endpoint-type" id="{$jenkinsEndPointTypeName}" name="{$jenkinsEndPointTypeName}">
+                <option
+                        value="com.nerdwin15.stash.webhook.notifier.GitPluginNotifier"
+                        {if $jenkinsEndPointTypeValue == 'com.nerdwin15.stash.webhook.notifier.GitPluginNotifier'}
+                        selected
+                        {/if}
+                >Git Plugin</option>
+                <option
+                        value="com.nerdwin15.stash.webhook.notifier.BitbucketSourceNotifier"
+                        {if $jenkinsEndPointTypeValue == 'com.nerdwin15.stash.webhook.notifier.BitbucketSourceNotifier'}
+                        selected
+                        {/if}
+                >Bitbucket Source Plugin</option>
+            </select>
+            <!--
+            <button class="aui-button" id="detectEndPointButton">{getText('stash.webhook.repo.end.point.type.detect')}</button>
+            -->
+            <div class="description">
+                {getText('stash.webhook.repo.end.point.type.description')}
+            </div>
+        </div>
+
+        <div class="field-group cloneUrl">
+            <label for="{$cloneTypeName}">{getText('stash.webhook.repo.cloneUrl.label')}</label>
+            <select class="select clone-type" id="{$cloneTypeName}" name="{$cloneTypeName}" data-persisted-clone-type="{$cloneTypeValue}" style="max-width: 90px">
+                <option value="http" {($cloneTypeValue == 'http' or (not $cloneTypeValue and not $cloneUrlValue)) ? 'selected="selected"' : ''}>
+                    HTTP
+                </option>
+                <option value="ssh" {($cloneTypeValue == 'ssh') ? 'selected="selected"' : ''}>SSH</option>
+                <option value="custom" {($cloneTypeValue != 'http' and $cloneTypeValue != 'ssh' and $cloneUrlValue) ? 'selected="selected"' : ''}>
+                    Custom
+                </option>
+            </select>
+            &nbsp;
+            <input id="{$cloneUrlName}" class="text clone-url" style="max-width: 400px" type="text"
+                   name="{$cloneUrlName}" value="{if $cloneUrlValue}{$cloneUrlValue}{/if}">
+            <div class="description">
+
+                {if $scope.type == 'REPOSITORY'}
+                    {getText('stash.webhook.repo.cloneUrl.description')}
+                {/if}
+
+                {if $scope.type == 'PROJECT'}
+                    {getText('stash.webhook.repo.cloneUrl.project.description')}
+                {/if}
+
+            </div>
+            {if $cloneUrlError}
+                <div class="error">{$cloneUrlError|noAutoescape}</div>
+            {/if}
+            {if $cloneTypeError}
+                <div class="error">{$cloneTypeError|noAutoescape}</div>
+            {/if}
+        </div>
+        <div class="field-group mirrorServerId" style="display:none">
+            <label for="{$mirrorServerIdName}">{getText('stash.webhook.repo.mirror.server.id.label')}</label>
+            <select class="select mirror-server-id" id="{$mirrorServerIdName}" name="{$mirrorServerIdName}" {if $mirrorServerIdValue} data-persisted-mirror-server-id="{$mirrorServerIdValue}" {/if}>
+            </select>
+            <input type="hidden" class="mirror-clone-url" id="{$mirrorCloneUrlName}" name="{$mirrorCloneUrlName}" value="{$mirrorCloneUrlValue}"/>
+            <div class="description">
+                {getText('stash.webhook.repo.mirror.server.id.description')}
+            </div>
+        </div>
+        {if not $displayAddButton}
+            <hr/>
+        {/if}
+    </div>
+{/template}
+
+
+/**
+ * @param eventTypes
+ * @param value
+ */
+{template .eventSelectorInternal}
+    <div id="event-selector" class="event-selector">
+        <input type="hidden" name="disabledEvents" value="{$value}"/>
+        {foreach $eventType in $eventTypes}
+            <a href="#">
+                <span class="aui-lozenge {if $eventType.selected} aui-lozenge-error {else} aui-lozenge-subtle {/if}" 
+                        data-event-class="{$eventType.eventClass}"
+                        title="{$eventType.eventTitle}">
+                    {$eventType.eventName}
+                </span>
+            </a>
+        {/foreach}
+    </div>
+    <div class="description">
+        {getText('stash.webhook.repo.event.selector.description')}
+    </div>
+{/template}
