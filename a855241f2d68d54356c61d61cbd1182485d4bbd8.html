@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta id="bb-bootstrap" data-current-user="{&quot;isKbdShortcutsEnabled&quot;: true, &quot;isSshEnabled&quot;: false, &quot;isAuthenticated&quot;: false}"
+ />
+  <script nonce="">
+
+if (window.performance) {
+
+  
+  window.performance.okayToSendMetrics = !document.hidden && 'onvisibilitychange' in document;
+
+  if (window.performance.okayToSendMetrics) {
+
+    
+    window.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        window.performance.okayToSendMetrics = false;
+      }
+    });
+  }
+}
+</script>
+  
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>
+  firewiccagroup / blockchain-tutorial 
+  / commit / a855241f2d68
+ &mdash; Bitbucket
+</title>
+  <script nonce="" type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwMGVVZSGwIIUFBQDwU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(23),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(24),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){j++,L=y.hash,this[u]=x.now()}function o(){j--,y.hash!==L&&i(0,!0);var t=x.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=x.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,x=t("loader");if(w[v]&&x.xhrWrappable){var g=t(10),b=t(11),E=t(8),R=t(6),O=t(13),C=t(7),P=t(14),T=t(9),N=t("ee"),S=N.get("tracer");t(16),x.features.spa=!0;var L,j=0;N.on(u,r),N.on(p,r),N.on(d,o),N.on(l,o),N.buffer([u,d,"xhr-done","xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),P.buffer([u,"new-xhr","send-xhr"+s]),C.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),g.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),T.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(P,"send-xhr"+s),a(N,"xhr-resolved"),a(N,"xhr-done"),a(C,m+s),a(C,m+"-done"),a(T,"new-jsonp"),a(T,"jsonp-end"),a(T,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,j>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",y="pushState",x=t("loader");x.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=x.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,x.now()])}),a.on(m,function(t,e,n){this.bstStart=x.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,x.now(),this.bstType])}),s.on(m,function(){this.bstStart=x.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,x.now(),"requestAnimationFrame"])}),o.on(y+l,function(t){this.time=x.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(26)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(23);e.exports=o;var a=window,s="fetch-",c=s+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,l="prototype";u&&d&&p&&(i(f,function(t,e){r(u[l],e,c),r(d[l],e,c)}),r(a,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(26)(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t(26)(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(26)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(26),a=t("ee").get("promise"),s=i(a),c=t(23),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(26)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(26)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(26)(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,g),g.prototype=l.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(){var t=window.NREUM,e=t.info.accountID||null,n=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!e||!n||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:e,ap:n,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&e!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(21);e.exports={generateTraceHeader:r}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(p[r],this.listener,!1);e.aborted||(n.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):a(this,t),n.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return v(r)}function i(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}function a(t,e){t.params.status=e.status;var n=o(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(17),u=t(15).generateTraceHeader,d=t("ee"),p=["load","error","abort","timeout"],l=p.length,h=t("id"),m=t(20),v=t(19),w=window.XMLHttpRequest;s.features.xhr=!0,t(14),d.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){a(e,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=!!NREUM.init.distributed_tracing.enabled),n&&this.sameOrigin){var r=u();r&&e.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=v(r);i&&(n.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{d.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<l;a++)e.addEventListener(p[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),d.on("xhr-load-added",function(t,e){var n=""+h(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,e){var n=""+h(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],e)}),d.on("removeEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],e)}),d.on("fn-start",function(t,e,n){e instanceof w&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,e){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,e],e)})}},{}],17:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],18:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(23),s=t(24),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],19:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],20:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}e.exports={generateUuid:r,generateCatId:o}},{}],22:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],26:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(24),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[x[n]];return d&&d.push([g,n,r,a]),a}}function l(t,e){y[t]=m(t).concat(e)}function h(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",x[n]=e,e in u||(u[e]=[])})}var y={},x={},g={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(23),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+b.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(23),u=t("ee"),d=t(22),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1130.min.js"},g=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:g,userAgent:d};t(18),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(25)},{}]},{},["loader",2,16,5,3,4]);</script>
+  
+
+
+<meta name="bb-env" content="production" />
+<meta id="bb-canon-url" name="bb-canon-url" content="https://bitbucket.org">
+<meta name="bb-api-canon-url" content="https://api.bitbucket.org">
+
+
+
+<meta name="bb-commit-hash" content="6dc99cf7265f">
+<meta name="bb-app-node" content="app-167">
+<meta name="bb-view-name" content="bitbucket.apps.repo2.views.changeset">
+<meta name="ignore-whitespace" content="False">
+<meta name="tab-size" content="None">
+<meta name="locale" content="en">
+<meta name="application-name" content="Bitbucket">
+<meta name="apple-mobile-web-app-title" content="Bitbucket">
+<meta name="slack-app-id" content="A8W8QLZD1">
+<meta name="statuspage-api-host" content="https://bqlf8qjztdtr.statuspage.io">
+
+
+<meta name="theme-color" content="#0049B0">
+<meta name="msapplication-TileColor" content="#0052CC">
+<meta name="msapplication-TileImage" content="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/logos/bitbucket/mstile-150x150.png">
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/logos/bitbucket/apple-touch-icon.png">
+<link rel="icon" sizes="192x192" type="image/png" href="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/logos/bitbucket/android-chrome-192x192.png">
+
+<link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=2">
+<link rel="mask-icon" href="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/logos/bitbucket/safari-pinned-tab.svg" color="#0052CC">
+
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket">
+
+  <meta name="description" content="">
+  
+  
+    
+  
+
+
+
+  <link rel="stylesheet" href="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/css/entry/vendor.css" />
+<link rel="stylesheet" href="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/css/entry/app.css" />
+
+
+
+  <link rel="stylesheet" href="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/css/entry/adg3-skeleton-nav.css">
+  <link rel="stylesheet" href="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/css/entry/adg3.css">
+  
+  <script nonce="">
+  window.__sentry__ = {"dsn": "https://ea49358f525d4019945839a3d7a8292a@sentry.io/159509", "release": "6dc99cf7265f (production)", "tags": {"project": "bitbucket-core"}, "environment": "production"};
+</script>
+<script src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/dist/webpack/sentry.js" nonce=""></script>
+  <script src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/dist/webpack/early.js" nonce=""></script>
+  
+  
+  
+  
+    <link href="/firewiccagroup/blockchain-tutorial/rss" rel="alternate nofollow" type="application/rss+xml" title="RSS feed for blockchain-tutorial" />
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@bitbucket"/>
+  <meta name="og:type" content="bitbucket:gitcommit"/>
+  <meta name="og:title"
+      content="firewiccagroup / blockchain-tutorial - a855241"/>
+  <meta name="og:url"
+      content="https://bitbucket.org/firewiccagroup/blockchain-tutorial/commits/a855241f2d68d54356c61d61cbd1182485d4bbd8"/>
+  <meta name="og:description" content=".gitignore created online with Bitbucket"/>
+  
+    <meta name="og:image" content="https://bytebucket.org/ravatar/%7Be3dbce86-74d3-40e6-8b83-14503ec28830%7D?ts=default"/>
+  
+  
+
+</head>
+<body class="production adg3 "
+    data-static-url="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/"
+data-base-url="https://bitbucket.org"
+data-no-avatar-image="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/default_avatar/user_blue.svg"
+data-current-user="{&quot;isKbdShortcutsEnabled&quot;: true, &quot;isSshEnabled&quot;: false, &quot;isAuthenticated&quot;: false}"
+data-atlassian-id="{&quot;loginUrl&quot;: &quot;https://id.atlassian.com/login?continue=https%3A%2F%2Fbitbucket.org%2Ffirewiccagroup%2Fblockchain-tutorial%2Fcommits%2Fa855241f2d68d54356c61d61cbd1182485d4bbd8&amp;prompt=login&quot;, &quot;loginStatusUrl&quot;: &quot;https://id.atlassian.com/profile/rest/profile&quot;}"
+data-settings="{&quot;MENTIONS_MIN_QUERY_LENGTH&quot;: 1}"
+
+data-current-repo="{&quot;scm&quot;: &quot;git&quot;, &quot;fullslug&quot;: &quot;firewiccagroup/blockchain-tutorial&quot;, &quot;uuid&quot;: &quot;e3dbce86-74d3-40e6-8b83-14503ec28830&quot;, &quot;language&quot;: &quot;&quot;, &quot;baseUrl&quot;: &quot;firewiccagroup&quot;, &quot;id&quot;: 54815923, &quot;readOnly&quot;: false, &quot;mainbranch&quot;: {&quot;name&quot;: &quot;master&quot;}, &quot;owner&quot;: {&quot;username&quot;: &quot;firewiccagroup&quot;, &quot;uuid&quot;: &quot;2caa4c38-2859-48ec-8fb1-1f724f918d66&quot;, &quot;isTeam&quot;: false}, &quot;pygmentsLanguage&quot;: null, &quot;slug&quot;: &quot;blockchain-tutorial&quot;}"
+data-current-cset="a855241f2d68d54356c61d61cbd1182485d4bbd8"
+
+
+
+
+
+
+data-browser-monitoring="true"
+data-switch-create-pullrequest-commit-status="true"
+
+
+
+
+>
+<div id="page">
+  
+    
+    <div id="adg3-navigation"
+  
+  
+  
+  
+  >
+  <nav class="skeleton-nav">
+    <div class="skeleton-nav--left">
+      <div class="skeleton-nav--left-top">
+        <ul class="skeleton-nav--items">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li class="skeleton--icon"></li>
+          <li class="skeleton--icon-sub"></li>
+          <li class="skeleton--icon-sub"></li>
+          <li class="skeleton--icon-sub"></li>
+          <li class="skeleton--icon-sub"></li>
+          <li class="skeleton--icon-sub"></li>
+          <li class="skeleton--icon-sub"></li>
+        </ul>
+      </div>
+      <div class="skeleton-nav--left-bottom">
+        <div class="skeleton-nav--left-bottom-wrapper">
+          <div class="skeleton-nav--item-help"></div>
+          <div class="skeleton-nav--item-profile"></div>
+        </div>
+      </div>
+    </div>
+    <div class="skeleton-nav--right">
+      <ul class="skeleton-nav--items-wide">
+        <li class="skeleton--icon-logo-container">
+          <div class="skeleton--icon-container"></div>
+          <div class="skeleton--icon-description"></div>
+          <div class="skeleton--icon-logo"></div>
+        </li>
+        <li>
+          <div class="skeleton--icon-small"></div>
+          <div class="skeleton-nav--item-wide-content"></div>
+        </li>
+        <li>
+          <div class="skeleton--icon-small"></div>
+          <div class="skeleton-nav--item-wide-content"></div>
+        </li>
+        <li>
+          <div class="skeleton--icon-small"></div>
+          <div class="skeleton-nav--item-wide-content"></div>
+        </li>
+        <li>
+          <div class="skeleton--icon-small"></div>
+          <div class="skeleton-nav--item-wide-content"></div>
+        </li>
+        <li>
+          <div class="skeleton--icon-small"></div>
+          <div class="skeleton-nav--item-wide-content"></div>
+        </li>
+        <li>
+          <div class="skeleton--icon-small"></div>
+          <div class="skeleton-nav--item-wide-content"></div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+    <div id="wrapper">
+      
+  <div id="before-header-wrapper">
+    
+  </div>
+
+
+      
+ 
+
+      
+  
+
+<div id="account-warning" data-module="header/account-warning"
+  data-unconfirmed-addresses="false"
+  data-no-addresses="false"
+  
+></div>
+
+
+
+      
+  
+<header id="aui-message-bar">
+  
+</header>
+
+
+      <div id="content" role="main">
+        
+          <header class="app-header">
+              <div class="app-header--primary">
+                
+                  <div class="app-header--context">
+                    <div class="app-header--breadcrumbs">
+                      
+  <ol class="aui-nav aui-nav-breadcrumbs">
+    
+  <li>
+    <a href="/%7B2caa4c38-2859-48ec-8fb1-1f724f918d66%7D/">E.S.A Security Group Shield</a>
+  </li>
+  
+
+<li>
+  <a href="/firewiccagroup/blockchain-tutorial">blockchain-tutorial</a>
+</li>
+    
+  <li>
+    <a href="/firewiccagroup/blockchain-tutorial/commits/">
+      Commits
+    </a>
+  </li>
+
+  </ol>
+
+                    </div>
+                      
+                  </div>
+                
+             </div>
+             <div class="app-header--secondary">
+                <h1 class="app-header--heading">
+                  Commit
+                </h1>    
+               
+                 
+               
+             </div>
+          </header>
+        
+        
+        
+  <div class="aui-page-panel ">
+    
+    <div class="hidden">
+  
+  
+  
+
+  </div>
+    <div class="aui-page-panel-inner">
+
+      <div
+        id="repo-content"
+        class="aui-page-panel-content forks-enabled"
+        data-module="repo/index"
+        
+          data-project-id="7828212"
+        
+      >
+        
+        
+  
+  <span id="user-repo-privilege-data" data-priv='None'></span>
+
+  <section id="commit"
+      data-module="repo/commits/view">
+    <header id="commit-header" data-module="repo/commits/commit-header">
+      <article class="commit-info">
+        <div class="commit-header aui-group aui-group-split">
+          <div class="aui-item">
+            <div class="commit-description">
+              
+    
+    
+  
+              
+                
+                  
+
+
+<span class="author ">
+  
+
+    <span class="aui-avatar inline-user--avatar"
+        data-module="components/user-profile-avatar"
+        data-user="{&quot;display_name&quot;: &quot;E.S.A Security Group Shield&quot;, &quot;uuid&quot;: &quot;{2caa4c38-2859-48ec-8fb1-1f724f918d66}&quot;, &quot;links&quot;: {&quot;self&quot;: {&quot;href&quot;: &quot;https://bitbucket.org/!api/2.0/users/%7B2caa4c38-2859-48ec-8fb1-1f724f918d66%7D&quot;}, &quot;html&quot;: {&quot;href&quot;: &quot;https://bitbucket.org/%7B2caa4c38-2859-48ec-8fb1-1f724f918d66%7D/&quot;}, &quot;avatar&quot;: {&quot;href&quot;: &quot;https://secure.gravatar.com/avatar/993bc96b47c84a95eeda19b63169a17f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FES-1.png&quot;}}, &quot;type&quot;: &quot;user&quot;, &quot;account_status&quot;: &quot;active&quot;, &quot;nickname&quot;: &quot;Ambjorn Skold&quot;, &quot;account_id&quot;: &quot;5bd0a5744b76d050e296ec7a&quot;}"
+        data-react-props="{&quot;size&quot;: &quot;medium&quot;}">
+        <span class="aui-avatar aui-avatar-medium">
+          <span class="aui-avatar-inner">
+            <img src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/default_avatar/user_blue.svg"
+                class="deferred-image"
+                data-src-url="https://secure.gravatar.com/avatar/993bc96b47c84a95eeda19b63169a17f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FES-1.png&amp;s=32"
+                data-src-url-2x="https://secure.gravatar.com/avatar/993bc96b47c84a95eeda19b63169a17f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FES-1.png&amp;s=64"
+                alt="">
+          </span>
+        </span>
+      </span>
+
+      <span class="author inline-user--name"" title="E.S.A Security Group Shield">E.S.A Security Group Shield</span>
+    </span>
+
+  
+</span>
+                
+              
+              
+              
+                committed
+                <span class="changeset-hash">a855241</span>
+              
+              
+              
+              
+              <time datetime="2019-09-11T02:11:42+00:00">16 hours ago</time>
+            </div>
+          </div>
+          <div class="commit-actions aui-item">
+            <a href="/firewiccagroup/blockchain-tutorial/src/a855241f2d68d54356c61d61cbd1182485d4bbd8" class="aui-button">
+              <span>View source</span>
+            </a>
+            
+          </div>
+        </div>
+        <div class="aui-group">
+          <div class="aui-item commit-main">
+            <div
+                class="commit-message"><p>.gitignore created online with Bitbucket</p></div>
+          </div>
+          <div class="aui-item commit-sidebar detail-summary--panel">
+            <ul class="detail-summary--section">
+              
+              
+              <li class="detail-summary--item hidden" data-module="commitstatus/status-updater">
+
+  
+    <div data-url="/!api/2.0/repositories/firewiccagroup/blockchain-tutorial/commit/a855241f2d68d54356c61d61cbd1182485d4bbd8/statuses"
+        data-module="commitstatus/status-dialog">
+  
+    <span class="aui-icon aui-icon-small aui-iconfont-build detail-summary--icon" title="Commit status">Commit status</span>
+    
+  
+    </div>
+  
+
+</li>
+              <li id="participants"
+                  class="detail-summary--item participants truncated"
+                  data-participants-url="/!api/2.0/repositories/firewiccagroup/blockchain-tutorial/commit/a855241f2d68d54356c61d61cbd1182485d4bbd8?fields=participants,author,date"
+                  data-likes-url="/!api/2.0/repositories/firewiccagroup/blockchain-tutorial/commit/a855241f2d68d54356c61d61cbd1182485d4bbd8/approve"
+                  data-noun="changeset">
+                <span
+                    class="aui-icon aui-icon-small aui-iconfont-group detail-summary--icon"
+                    title="Participants">
+                  Participants
+                </span>
+                <ol class="clearfix">
+                  <li class="empty"></li>
+                </ol>
+                
+    
+    
+  
+              </li>
+              
+                
+              
+              
+                
+              
+              
+                
+              
+              
+                <li class="detail-summary--item commit-branches count-0">
+                  <span
+                      class="aui-icon aui-icon-small aui-iconfont-devtools-branch detail-summary--icon"
+                      title="Branches">
+                    Branches
+                  </span>
+                  
+                    
+                      
+                        <a href="/firewiccagroup/blockchain-tutorial/commits/branch/master">
+                          master
+                        </a>
+                      
+                    
+                  
+                </li>
+                
+                  <li
+                      class="detail-summary--item commit-tags count-0"
+                      
+                      data-tags="[]">
+                  </li>
+                
+              
+              
+                
+                
+                  
+<li class="detail-summary--item">
+  <button
+     id="detail-summary-web-item-GbjL84"
+     
+     target="_blank"
+     data-module-key="commitprs"
+     data-plugin-key="bitbucket-prlinks"
+     data-target-type="dialog"
+     data-target-options="{&quot;chrome&quot;: false, &quot;width&quot;: 650, &quot;productContext&quot;: {&quot;encContext&quot;: &quot;gAAAAABdeUKJNLvHd-SVjhseT5eQTOzjaXO0Np2mSM0zfvRW1Drj-iAerWjrLb2OZZhO6d_N9z_Y-eX1CVRNsdlLgTsyYORGOn0WhSfRxEHF68shGYxIuNUM22zBEbeWV0TgfP9BolU6wgKR6nsyzJMzxgOfJF0hSfXKwBbLXCxX8eNWCwDveddDL8H-9lIeJutr44nQONvCy0Ce1OQznOXwtBAHnW6_4lN7BcxTSxARifv2ThhIcnpCrfaPquwIuFW3RSsxtWqe3QB3nH4r6QoGlenu-5auV54eDOqnhXfWRAv1aNklEsv9ZtotQTWblDR8dvTwNNAVNGlfRdHoYx7BurFkGrn8LeSzdJ7sXmPdFOKbgyI0nzwkybuvb4hGOIlRBVdz6-cwcszs75do2rmZEW4CPwhCRGZHkfEnkZMm_YwZydo6C0uRpXItw4vnBb8lQHE0yHGXnEDzK52CQqa7wJz6-r2SlDy6_46SLq3jiJ3OlqulkECRfcwJHAs_wgAXgsrsPTPqZHnzfd-W0X1X0sXXWoGz1EdqGcdDWeuEs_CUJxgLF4P3NQPcNUYVOK-I_2CvfSnSjh0xdO9J2RfV_Thh2rFslusqyPNCSnbKYRCJX7l1wmACPaHyyQxns8VabcK7zMtHNcJ_EAEvpB_fZHJRU48_N4L02QnEeU8PAngTxXhqbDCub7VZ9ozVzyW6mDxgQGvRK2JFnCQ3h1yYF-dNMqEK24_qzcj7QbBkLY9esH1EKSSt9f960HDSNlODUANbkp-jbUmLnAp2pxN8-wILBiEqUuTJNkJGIjlBfRuW9irZxU3wSGMVL0aksV0BzsxFNl0BcTh3wNOy76hfOuYA2xeSfu_Y2KkKAEHY2r0gG06V-m9czO7g2ouGnmvkIVN_4nF6KbXAEaD1N4MMje4NqgK_ygd54yqSHwJB01jCNCxqS0l34DKAddMv46Rs3AVYpe0P-Fp8r45D-_z66LwZzGywlnEcipppj88q_kMuwwck6NuxVNaKUQBufcIf9gch2fUDVojDDIGcfBESApdbXk1X_RjQ-qIfWysjhw6Yc3O--td7Fj5457lFIDmhKpfcqDDNcM299xKVzQw7aZu1pimc5ePjQ3YjTbIItQn-iUnCo2MuAR_JF5DBR1jvOzd7TOiNhQNwTiaRR6kxoyAJXasQ-g==&quot;}, &quot;height&quot;: 320}"
+     data-location="org.bitbucket.commit.summary.info"
+     class="detail-summary--item--link ap-dialog aui-button aui-button-link"
+      >
+      
+        <span class="aui-icon aui-icon-small aui-iconfont-devtools-compare detail-summary--icon"></span>
+      
+    <span class="aui-nav-item-label">Go to pull request</span>
+  </button>
+</li>
+
+                
+              
+            </ul>
+            
+              <ul class="detail-summary--section">
+                
+                  <li class="detail-summary--item">
+                    <span
+                        class="aui-icon aui-icon-small aui-iconfont-devtools-file detail-summary--icon">
+                      Raw commit
+                    </span>
+                    <a href="
+                        /firewiccagroup/blockchain-tutorial/commits/a855241f2d68d54356c61d61cbd1182485d4bbd8/raw" class="js-view-raw-commit">
+                      View raw commit
+                    </a>
+                  </li>
+                
+                
+                
+                  
+                  
+                    
+<li class="detail-summary--item">
+  <button
+     id="detail-summary-web-item-LjgRBM"
+     
+     target="_blank"
+     data-module-key="runPipelineWebItem"
+     data-plugin-key="pipelines"
+     data-target-type="dialog"
+     data-target-options="{&quot;chrome&quot;: false, &quot;width&quot;: &quot;600&quot;, &quot;productContext&quot;: {&quot;encContext&quot;: &quot;gAAAAABdeUKJLkx0fCW2p0y1XrnmpoPoHmBP9Ggd7B7mqtKXf-x2fc84BYqQWfz-WTLJtq-jzjSikRTrN9poRr2z0t65VagyTZRh4FdXiUNBL7Js3XcmV43j4FhnWgT9zJoZydb6jFi_LLTCXSW6wrFpC-J915PbeDWGKDn_zPDU8Na2DbgHZ5bTOqUC3PI5IF5qZ5FCV7unFUbdnLY57UDlMmkCFlNcz7_BN0cHYSz_IyLPE1mxPXXABLA1pyw_ovKPtz9PTMtu508En_YNx-SFkRAvuqXBew6ybBW0bRH4o-KO-HDCZHppW8xZkXuqutndDKb7r8EGkHbDQSZJuGptdHCXYO4NyzVDcqWK8NtZSBKUA8etleZ-zduZTvTYgRGPxr9I39ru8aQRBJDa_K3teEPcExyChuN0mk4cU5jkD5l-uUuy45wHoMqmWsjlhthUQUM01oZGBTEeMQ8frkFqU5W2H-RrGK6pE4ECiLtrvTqmVyUtVmBfYLs_0d_0FkjqShcoemdagAOb8FQ3vKvnwZ3JjvEjYjhaDlI7qFrYcpGxYraeMg7V1uHchimQkCKK7_HXjOiSUAJylRtnuSWbWU2EdS08QPxLg9OxIZ2GGdShgPwuTMXvnnVvEjIa_a5ee6OPuAu9eFQCkrGB4ShtvoETtP9RQDyox-9onNrXKUZZVL150LtpV-zqXpaCAwAEHqPH2FyB_w5Eg0gzngTbXrTAXZ1_cTgeQy8GEX8G5nmcCWyItIUMJeNFfodWD4-b05A8YCtJ6t6Y_HYACOXWjd6vwYOGgIyeJHFoH7Bb7HxmjmHaf_Qw8GZpVeKiT3lbwW4LrGPxnv9LwmUcdcFp1wMFT6dc6ftBs7iT2S4NgT1OfK0rCux4OvAl2mmx8yOH3YXFgvaBBKQ--y4NTdyxdwTohjjZfU4DHvV_h18p_DKKe8YQYCCIFlJzlsHYd1R9ZqKJT48o8HOlc8IpzaNQMmLEOmH4gTCBKdAhmWCt6HFfxLHrPOJopHF6mpf0Xj5NnPB1LxKyX7H00jLtzNXBUtO05rIfRKvQszPuVrLq9fwY8NwLMKpHtqzORAigR5_p8CwfQB7lTAiwdQg3-BrWNS-JuhWnbnHUkZH0WFPCiaefKnhV98Gsov7GmonpevIgt2h0AIs639B1e6hbmoqtnBL7jWDepw==&quot;}, &quot;height&quot;: &quot;500&quot;}"
+     data-location="org.bitbucket.commit.summary.actions"
+     class="detail-summary--item--link ap-dialog aui-button aui-button-link"
+      >
+      
+        <img src="https://bitbucket-connect-icons.s3.amazonaws.com/add-on/icons/62acf41d-386f-49fd-b823-4f86445390e2.svg" alt="Run pipeline" class="aui-icon aui-icon-small detail-summary--icon" />
+      
+    <span class="aui-nav-item-label">Run pipeline</span>
+  </button>
+</li>
+
+                  
+                
+              </ul>
+            
+          </div>
+        </div>
+      </article>
+    </header>
+
+    <section id="general-comments" class="main">
+  <h1>
+    
+      Comments (<span class="comment-count">0</span>)
+    
+  </h1>
+  <ol id="comments-list" class="comments-list line-commenting">
+    <div id="general-thread-ids"
+        data-value="[]"></div>
+    
+    
+  </ol>
+</section>
+
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+
+    <div id="comment-info"
+        data-comment-url="/!api/2.0/repositories/firewiccagroup/blockchain-tutorial/commit/a855241f2d68d54356c61d61cbd1182485d4bbd8/comments"
+        data-general-thread-ids="[]"
+        
+          data-file-line-thread-ids="{}"
+        
+    ></div>
+
+    
+      <section id="commit-summary">
+        <h1>Files changed <span>(1)</span></h1>
+
+<ul class="commit-files-summary" id="commit-files-summary">
+  
+    
+      <li class="iterable-item file file-added"
+          data-file-identifier=".gitignore">
+        <div class="commit-file-diff-stats">
+          <span class="lines-added">
+            
+              +1
+            
+          </span>
+          <span class="lines-removed">
+            
+              -0
+            
+          </span>
+        </div>
+
+        <span class="diff-summary-lozenge aui-lozenge aui-lozenge-subtle aui-lozenge-success"
+            data-module="components/tooltip" data-tooltip-gravity="s"
+            title="Added">
+          A
+        </span>
+
+        <a class="commit-files-summary--filename execute" data-add-to-stack="true" href="#chg-.gitignore">
+          .gitignore
+        </a>
+
+        
+
+        
+        
+      </li>
+    
+  
+</ul>
+      </section>
+    
+    
+
+
+
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+
+<section id="changeset-diff" class="main maskable">
+  <div class="bb-patch bb-patch-unified" data-module="pullrequests/file-options">
+  
+    
+
+
+
+
+
+  
+
+
+<section class="iterable-item bb-udiff maskable"
+    data-path=".gitignore"
+    
+      data-source-url="/api/internal/repositories/firewiccagroup/blockchain-tutorial/src/a855241f2d68d54356c61d61cbd1182485d4bbd8/.gitignore"
+    
+    id="chg-.gitignore"
+    
+    data-identifier=".gitignore"
+    data-filename=".gitignore"
+    
+      data-linecommentroots="{}"
+    
+    data-compare-files-url="/!api/internal/repositories/firewiccagroup/blockchain-tutorial/a855241f2d68d54356c61d61cbd1182485d4bbd8/diff"
+    data-expand-context-url="/!api/internal/repositories/firewiccagroup/blockchain-tutorial/changesets-expand/a855241f2d68d54356c61d61cbd1182485d4bbd8/_context/"
+    
+    
+    
+    >
+  <div class="diff-container">
+    <div class="heading">
+      <div class="primary">
+        <h1 class="filename">
+          <span class="aui-icon aui-icon-small aui-iconfont-devtools-file diff-entry-kind-icon">File</span>
+          .gitignore
+          
+          <span class="diff-entry-lozenge aui-lozenge aui-lozenge-subtle aui-lozenge-success">Added</span>
+        </h1>
+      </div>
+      <div class="diff-actions secondary">
+        
+        <div class="aui-buttons">
+          
+        </div>
+        <div class="aui-buttons">
+          
+            
+              <button class="execute click aui-button aui-button-light sbs"
+                  title="View the side-by-side diff for this file"
+                  data-module="components/tooltip">
+                Side-by-side diff
+              </button>
+            
+            
+              <a class="view-file aui-button aui-button-light"
+                  
+                    href="/firewiccagroup/blockchain-tutorial/src/a855241f2d68d54356c61d61cbd1182485d4bbd8/.gitignore"
+                    title="View the full source of this file"
+                  
+                  data-module="components/tooltip">
+                View file
+              </a>
+            
+          
+        </div>
+        
+        <div class="aui-buttons">
+          <button class="aui-button aui-button-light aui-button-subtle aui-dropdown2-trigger aui-dropdown2-trigger-arrowless aui-dropdown2-trigger-more"
+              aria-owns="file-more-dropdown-.gitignore"
+              aria-haspopup="true"
+              data-container="#chg-.gitignore">
+            <span class="aui-icon aui-icon-small aui-iconfont-more">More</span>
+          </button>
+        </div>
+        <div id="file-more-dropdown-.gitignore" class="aui-dropdown2 aui-style-default">
+          <ul>
+            <li>
+              <span role="checkbox" class="diff-ignore-whitespace aui-dropdown2-checkbox aui-dropdown2-checkbox-right"
+                  data-jump-to="#chg-.gitignore"
+                  aria-checked="false"
+                  data-key="ignoreWhitespace"
+                  title="Ignore whitespace changes for all files in this diff"
+                  data-tooltip-gravity="e"
+                  data-module="components/tooltip">
+                Ignore whitespace
+              </span>
+            </li>
+            
+            <li>
+              <span role="checkbox" class="diff-hide-word-diff aui-dropdown2-checkbox aui-dropdown2-checkbox-right"
+                  
+                  data-diff="chg-.gitignore"
+                  data-key="hideWordDiff"
+                  title="Hide word diff">
+                Hide word diff
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+
+      <div class="diff-content-container refract-container ">
+      
+        
+          
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+        
+      
+      
+        <div class="refract-content-container">
+          
+            
+              
+                
+
+
+  
+  
+    
+      <div class="udiff-line addition last first" style="counter-reset: fromLines 0 toLines 0;">
+        
+          <div class="gutter" id="L.gitignoreT1">
+            
+            <a class="line-numbers"
+              
+              data-tnum="1"
+              
+                href="#L.gitignoreT1"
+              ></a>
+          </div>
+        
+        <pre class="source">+# Add any directories, files, or patterns you don&#39;t want to be tracked by version control</pre>
+      </div>
+    
+
+    
+    
+      
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+    
+  
+
+              
+            
+          
+        </div>
+      
+    </div>
+  </div>
+</section>
+  
+  </div>
+</section>
+  </section>
+
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  
+  <div id="adg3-flag-root"></div>
+  <div id="tos-modal"></div>
+</div>
+
+<div id="adg3-dialog"></div>
+
+
+  
+
+<div data-module="components/mentions/index">
+  
+    
+    
+  
+  
+    
+    
+  
+  
+    
+    
+  
+</div>
+<div data-module="components/typeahead/emoji/index">
+  
+    
+    
+  
+</div>
+
+<div data-module="components/repo-typeahead/index">
+  
+    
+    
+  
+</div>
+
+    
+    
+  
+
+
+  <aui-inline-dialog
+    id="help-menu-dialog"
+    data-aui-alignment="bottom right"
+
+    
+    data-aui-alignment-static="true"
+    data-module="header/help-menu"
+    responds-to="toggle"
+    aria-hidden="true">
+
+  <div id="help-menu-section">
+    <h1 class="help-menu-heading">Help</h1>
+
+    <form id="help-menu-search-form" class="aui" target="_blank" method="get"
+        action="https://support.atlassian.com/customer/search">
+      <span id="help-menu-search-icon" class="aui-icon aui-icon-large aui-iconfont-search"></span>
+      <input id="help-menu-search-form-input" name="q" class="text" type="text" placeholder="Ask a question">
+    </form>
+
+    <ul id="help-menu-links">
+      <li>
+        <a class="support-ga" data-support-gaq-page="DocumentationHome"
+            href="https://confluence.atlassian.com/x/bgozDQ" target="_blank">
+          Online help
+        </a>
+      </li>
+      <li>
+        <a class="support-ga" data-support-gaq-page="GitTutorials"
+            href="https://www.atlassian.com/git?utm_source=bitbucket&amp;utm_medium=link&amp;utm_campaign=help_dropdown&amp;utm_content=learn_git"
+            target="_blank">
+          Learn Git
+        </a>
+      </li>
+      <li>
+        <a id="keyboard-shortcuts-link"
+           href="#">Keyboard shortcuts</a>
+      </li>
+      <li>
+        <a class="support-ga" data-support-gaq-page="DocumentationTutorials"
+            href="https://confluence.atlassian.com/x/Q4sFLQ" target="_blank">
+          Bitbucket tutorials
+        </a>
+      </li>
+      <li>
+        <a class="support-ga" data-support-gaq-page="SiteStatus"
+            href="https://status.bitbucket.org/" target="_blank">
+          Site status
+        </a>
+      </li>
+      <li>
+        <a class="support-ga" data-support-gaq-page="Home"
+            href="https://support.atlassian.com/bitbucket-cloud/" target="_blank">
+          Support
+        </a>
+      </li>
+    </ul>
+  </div>
+</aui-inline-dialog>
+  
+
+
+
+
+
+  
+
+  <div class="_mustache-templates">
+    
+      <script id="unmapped-author-dialog" type="text/html">
+        
+
+<h3>Unmapped user</h3>
+<p>This user cannot be matched to an Atlassian account.</p>
+<pre>[[raw_author]]</pre>
+<p><a href="[[link]]">Create an alias in your repository administration.</a></p>
+
+      </script>
+    
+      <script id="participant-template" type="text/html">
+        
+<li data-username="[[uuid]]">
+  <a [[^unmapped]]
+     href="/[[uuid]]/"
+     [[/unmapped]]
+     class="[[#approved]]approved[[/approved]]"
+     [[#approved]]
+       title="[[display_name]] approved this [[noun]] [[date]]"
+     [[/approved]]
+     [[^approved]]
+        [[#date]]
+          title="[[display_name]] updated this [[noun]] [[date]]"
+        [[/date]]
+        [[^date]]
+          title="[[display_name]][[#unmapped]] (This user cannot be matched to an Atlassian account)[[/unmapped]]"
+        [[/date]]
+     [[/approved]]
+    >
+    <span class="aui-avatar
+      [[#size]]
+       aui-avatar-[[size]]
+      [[/size]]
+      [[^size]]
+       aui-avatar-medium
+      [[/size]]">
+      <span class="aui-avatar-inner">
+        <img alt="[[display_name]]"
+         [[#unmapped]]
+           src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/unmapped_author_32.png"
+         [[/unmapped]]
+         [[^unmapped]]
+           [[#avatar]]
+             src="[[avatar]]"
+           [[/avatar]]
+           [[^avatar]]
+             src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/no_avatar.png"
+           [[/avatar]]
+         [[/unmapped]] />
+      </span>
+    </span>
+    <span>[[display_name]]</span>
+  </a>
+</li>
+
+      </script>
+    
+      <script id="comment-template" type="text/html">
+        
+
+
+  
+    
+[[#deleted]]
+<div class="deleted-comment-message" id="comment-[[comment_id]]" data-comment-id="[[comment_id]]">
+  Comment deleted
+</div>
+[[/deleted]]
+
+[[^deleted]]
+<article id="comment-[[comment_id]]" class="iterable-item"
+         data-content="[[content]]" data-comment-id="[[comment_id]]"
+         data-convert-markup="[[convert_markup]]">
+  <header>
+    [[#username]]<a href="/[[uuid]]/"title="[[uuid]]">[[/username]]
+      <div class="aui-avatar aui-avatar-medium author-avatar">
+        <div class="aui-avatar-inner">
+          <img src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/default_avatar/user_blue.svg" class="deferred-image"
+              data-src-url="[[user_avatar_url]]"
+              data-src-url-2x="[[user_avatar_url_2x]]">
+        </div>
+      </div>
+    [[#username]]</a>[[/username]]
+    [[#username]]
+      <a href="/[[uuid]]/" class="author-name">[[display_name]]</a>
+    [[/username]]
+    [[^username]]
+      <span class="author-name">[[display_name]]</span>
+    [[/username]]
+    [[#account_status_lozenge]]
+      <span class="aui-lozenge">[[account_status_lozenge]]</span>
+    [[/account_status_lozenge]]
+    [[#is_entity_author]]
+      <span class="aui-lozenge aui-lozenge-complete aui-lozenge-subtle author-lozenge">author</span>
+    [[/is_entity_author]]
+    [[^is_entity_author]]
+      [[#is_repo_owner]]
+        <span class="aui-lozenge aui-lozenge-complete aui-lozenge-subtle owner-lozenge">repo owner</span>
+      [[/is_repo_owner]]
+    [[/is_entity_author]]
+  </header>
+  <div class="wiki-content comment-content">
+    [[{content_rendered}]]
+  </div>
+  <ul class="comment-actions">
+    
+
+[[#isAuthenticated]]
+  <li>
+    <a href="#reply" class="reply-link execute click" data-add-to-stack="true">Reply</a>
+  </li>
+[[/isAuthenticated]]
+[[#isLikable]]
+  <li>
+    <a href="#like" class="comment-actions--toggle-like"></a>
+  </li>
+[[/isLikable]]
+[[#isAuthenticated]]
+  <li class="comment-actions--like-info hidden" data-likes="[[likes]]"></li>
+[[/isAuthenticated]]
+[[#isEditable]]
+  <li>
+    <a href="#edit" class="edit-link">Edit</a>
+  </li>
+  <li>
+    <a href="#delete" class="delete-link">Delete</a>
+  </li>
+[[/isEditable]]
+[[^isEditable]]
+  [[#isAdmin]]
+  <li>
+    <a href="#delete" class="delete-link">Delete</a>
+  </li>
+  [[/isAdmin]]
+[[/isEditable]]
+[[#show_tasks]]
+  [[#allow_task_creation]]
+    <li>
+      <a href="#create-task" class="task-link execute click">Create task</a>
+    </li>
+  [[/allow_task_creation]]
+[[/show_tasks]]
+<li>
+  <a class="permalink" href="#comment-[[comment_id]]" title="Link directly to this comment"><time datetime="[[utc_created_on]]" data-title="true">[[utc_created_on]]</time></a>
+</li>
+
+  </ul>
+</article>
+[[/deleted]]
+
+  
+
+<ul class="task-list"></ul>
+<ol class="child-comments iterable"></ol>
+
+      </script>
+    
+      <script id="new-comment-template" type="text/html">
+        
+<li class="new-comment">
+  <div class="user">
+    <div class="aui-avatar aui-avatar-medium">
+      <div class="aui-avatar-inner">
+        <img src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/default_avatar/user_blue.svg" class="deferred-image"
+            data-src-url="[[user_avatar_url]]"
+            data-src-url-2x="[[user_avatar_url_2x]]">
+      </div>
+    </div>
+  </div>
+  <form class="aui top-label editor" action="#">
+    <input type="hidden" class="parent_id"/>
+    <input type="hidden" class="comment_id"/>
+    [[#convert_markup]]
+      <div class="warning aui-message aui-message-warning convert-markup">
+        <span class="aui-icon icon-warning"></span>
+        
+        This comment is currently being rendered in creole. Editing the comment will cause it to be rendered in <a target="_blank" href="https://confluence.atlassian.com/x/jIAuEg">markdown</a>.
+        
+      </div>
+    [[/convert_markup]]
+    <div class="field-group">
+      <textarea id="id_new_comment" class="bb-mention-input"
+          
+          placeholder="What do you want to say?">[[content]]</textarea>
+      <div class="preview-container wiki-content"><!-- loaded via ajax --></div>
+      <div class="error"></div>
+    </div>
+    
+      <div class="gdpr-legacy-mentions-notice">
+      </div>
+    
+    <div class="buttons">
+      <button class="aui-button aui-button-primary js-comment-button" type="submit">Comment</button>
+      <a href="#" class="cancel">Cancel</a>
+      
+      
+
+    </div>
+    <div class="mask"></div>
+  </form>
+</li>
+
+      </script>
+    
+      <script id="new-atlassian-editor-comment-template" type="text/html">
+        
+<li class="new-comment">
+  <div class="user">
+    <div class="aui-avatar aui-avatar-medium">
+      <div class="aui-avatar-inner">
+        [[^hide_avatar]]
+        <img src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/img/default_avatar/user_blue.svg" class="deferred-image"
+            data-src-url="[[user_avatar_url]]"
+            data-src-url-2x="[[user_avatar_url_2x]]">
+        [[/hide_avatar]]
+      </div>
+    </div>
+  </div>
+  [[#convert_markup]]
+    <div class="warning aui-message aui-message-warning convert-markup">
+      <span class="aui-icon icon-warning"></span>
+      
+      This comment is currently being rendered in creole. Editing the comment will cause it to be rendered in <a target="_blank" href="https://confluence.atlassian.com/x/jIAuEg">markdown</a>.
+      
+    </div>
+  [[/convert_markup]]
+  <ak-editor-bitbucket
+    default-value="[[content]]"
+    context="comment"
+    placeholder="What do you want to say?"
+    show-buttons="true"
+    data-mention-url=""
+    [[#can_private_comment]]
+      private-comment-checkbox="true"
+      [[#is_private]]
+        private-comment-checked="true"
+      [[/is_private]]
+    [[/can_private_comment]]
+  ></ak-editor-bitbucket>
+  <div class="error"></div>
+  <div class="autoformatting-hints">Hint: Try **bold**, `inline code` or ``` for code blocks.</div>
+</li>
+
+      </script>
+    
+      <script id="diff-too-big-template" type="text/html">
+        
+<section class="bb-udiff iterable-item"
+    id="chg-[[ diffidentifier ]]"
+    data-identifier="[[ diffidentifier ]]"
+    data-filename="[[ filename ]]"
+    data-eclipsed-comment-view-url="">
+  <div class="heading [[# conflict ]]conflicts[[/ conflict ]]">
+    <div class="primary">
+      <h1 class="filename">[[ filename ]]</h1>
+    </div>
+    
+  </div>
+  <div class="diff-message-container">
+    <div class="aui-message info too-big-message">
+      <p class="title">
+        <span class="aui-icon icon-info"></span>
+        <strong class="try-again">Oops! You've got a lot of code in this diff and it couldn't load with the page.</strong>
+        <a href="#" class="load-diff try-again">Click here to give it another chance.</a>
+        <strong class="try-again-failed">Now that is a lot of code! There's simply too much in this diff for us to render it all.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+      </script>
+    
+      <script id="lfs-downloadable-template" type="text/html">
+        
+
+<div class="lfs-unrenderable-file">
+  <div class="lfs-unrenderable-file--image"></div>
+  <h3 class="lfs-unrenderable-file--title">Preview unavailable</h3>
+  <p class="lfs-unrenderable-file--description">Download this file to view it.</p>
+  <a class="aui-button aui-button-primary lfs-unrenderable-file--download"
+      href="[[downloadUrl]]">
+    Download file
+  </a>
+</div>
+
+      </script>
+    
+      <script id="lfs-error-template" type="text/html">
+        
+<div class="lfs-unrenderable-file lfs-error">
+  <div class="lfs-unrenderable-file--image"></div>
+  [[#missing]]
+    <h3 class="lfs-unrenderable-file--title">File missing</h3>
+    <p class="lfs-unrenderable-file--description">Your file may not have been correctly uploaded.</p>
+    <p class="lfs-unrenderable-file--action">
+      
+        <a href="https://confluence.atlassian.com/x/pwKSMQ#TroubleshootGitLFSinBitbucket-missing_LFS_file" target="_blank">Troubleshoot this</a>
+      
+    </p>
+  [[/missing]]
+  [[^missing]]
+    <h3 class="lfs-unrenderable-file--title">File storage error</h3>
+    <p class="lfs-unrenderable-file--description">
+      
+        An internal error has occurred while accessing the file.
+      
+    </p>
+    <p class="lfs-unrenderable-file--description">
+      
+      
+        You can
+        <a class="support-ga" data-support-gaq-page="SACCreateIssue"
+           href="https://support.atlassian.com/bitbucket-cloud/" target="_blank">
+            contact support
+        </a>
+        if the problem persists.
+      
+    </p>
+    [[/missing]]
+</div>
+
+      </script>
+    
+      <script id="two-up-diff-template" type="text/html">
+        
+
+<div class="diff two-up">
+  [[#show_image_toolbar]]
+    <div class="aui-toolbar2 image-differ-toolbar" role="toolbar">
+      <div class="aui-toolbar2-inner">
+        <div class="aui-toolbar2-primary image-differ-toggle">
+          <div class="aui-buttons">
+            <button class="aui-button image-differ-two-up" aria-pressed="true"
+                title="Compare images alongside each other">
+              Two-up
+            </button>
+            <button class="aui-button image-differ-blend" aria-disabled="true"
+                title="Blend mode image diff is not available because images are not of the same dimension"
+                data-enabled-title="Compare the image changes by fading in the differences"
+            >
+              Blend
+            </button>
+            <button class="aui-button image-differ-split" aria-disabled="true"
+                title="Split mode image diff is not available because images are not of the same dimension"
+                data-enabled-title="Compare the image changes by moving your mouse cursor left or right over the image"
+            >
+              Split
+            </button>
+            <button class="aui-button image-differ-pixeldiff" aria-disabled="true"
+                title="Pixel diff mode image diff is not available because images are not of the same dimension"
+                data-enabled-title="Compare the image changes by seeing which pixels have changed"
+            >
+            Pixel diff
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  [[/show_image_toolbar]]
+  <div class="two-up-diff--side-container">
+    [[#from.html]]
+      <div class="since-revision binary two-up-diff--side">
+        <h5>
+          [[^to]]Removed[[/to]][[#to]]Old[[/to]]
+          
+            [[#from.lfs]]
+              <button id="lfs-details-trigger" data-aui-trigger aria-controls="[[lfs_dialog_since_id]]" class="aui-lozenge aui-lozenge-complete">Git LFS</button>
+              
+                
+
+<aui-inline-dialog
+    id="[[lfs_dialog_since_id]]"
+    alignment="bottom center" class="lfs-info-dialog">
+  <h2>File stored in Git LFS</h2>
+  <p>The LFS repository stores a text pointer to
+    this file, which is actually stored on a remote server. <a href="https://confluence.atlassian.com/x/RDRmMQ" target="_blank">Read about Git LFS.</a>
+    </p>
+  <div class="lfs-info-dialog--actions">
+    <button class="lfs-info-dialog--close aui-button">Close</button>
+    
+  </div>
+</aui-inline-dialog>
+
+              
+            [[/from.lfs]]
+          
+        </h5>
+        [[&from.html]]
+      </div>
+    [[/from.html]]
+    [[#to.html]]
+      <div class="until-revision binary two-up-diff--side">
+        <h5>
+          [[^from]]Added[[/from]][[#from]]New[[/from]]
+          
+            [[#to.lfs]]
+              <button id="lfs-details-trigger" data-aui-trigger aria-controls="[[lfs_dialog_until_id]]" class="until-revision aui-lozenge aui-lozenge-complete">Git LFS</button>
+              
+                
+
+<aui-inline-dialog
+    id="[[lfs_dialog_until_id]]"
+    alignment="bottom center" class="lfs-info-dialog">
+  <h2>File stored in Git LFS</h2>
+  <p>The LFS repository stores a text pointer to
+    this file, which is actually stored on a remote server. <a href="https://confluence.atlassian.com/x/RDRmMQ" target="_blank">Read about Git LFS.</a>
+    </p>
+  <div class="lfs-info-dialog--actions">
+    <button class="lfs-info-dialog--close aui-button">Close</button>
+    
+  </div>
+</aui-inline-dialog>
+
+              
+            [[/to.lfs]]
+          
+        </h5>
+        [[&to.html]]
+      </div>
+    [[/to.html]]
+  </div>
+</div>
+
+      </script>
+    
+      <script id="image-diff-image-template" type="text/html">
+        
+
+<img src="[[imageSrc]]"
+     alt="Old image"
+     crossorigin="anonymous"
+>
+
+      </script>
+    
+      <script id="two-up-downloadable-preview-template" type="text/html">
+        
+
+<div class="two-up-diff--unrenderable">
+  <div class="two-up-diff--unrenderable--image[[#isLfs]] two-up-diff--unrenderable--image--lfs[[/isLfs]]"></div>
+  <h3 class="two-up-diff--unrenderable--title">Preview unavailable</h3>
+  <p class="two-up-diff--unrenderable--description">Download this file to view it.</p>
+  <a class="aui-button aui-button-primary two-up-diff--unrenderable--download"
+     href="[[downloadUrl]]">
+    Download file
+  </a>
+</div>
+
+      </script>
+    
+      <script id="mention-result" type="text/html">
+        
+[[! Escaping can be disabled (with "&") for these template vars because they're manually escaped in the various consumers ]]
+<span class="mention-result">
+  <span class="aui-avatar aui-avatar-small mention-result--avatar">
+    <span class="aui-avatar-inner">
+      <img src="[[avatar_url]]">
+    </span>
+  </span>
+  [[#display_name]]
+    [[#has_distinct_display_name]]
+      [[#nickname]]
+        <span class="display-name mention-result--display-name">[[&display_name]]</span> <span class="username mention-result--secondary-name mention-result--username">([[&nickname]])</span>
+      [[/nickname]]
+      [[^nickname]]
+        <span class="display-name mention-result--display-name">[[&display_name]]</span> <span class="username mention-result--secondary-name mention-result--username">([[&mention_id]])</span>
+      [[/nickname]]
+    [[/has_distinct_display_name]]
+    [[^has_distinct_display_name]]
+      <span class="display-name mention-result--display-name distinct">[[&display_name]]</span>
+    [[/has_distinct_display_name]]
+  [[/display_name]]
+  [[^display_name]]
+    [[#nickname]]
+      <span class="username mention-result--username">[[&nickname]]</span>
+    [[/nickname]]
+    [[^nickname]]
+      <span class="username mention-result--username">[[&mention_id]]</span>
+    [[/nickname]]
+  [[/display_name]]
+  [[#is_teammate]][[^is_team]]
+    <span class="aui-lozenge aui-lozenge-complete aui-lozenge-subtle mention-result--lozenge">teammate</span>
+  [[/is_team]][[/is_teammate]]
+</span>
+
+      </script>
+    
+      <script id="mention-call-to-action" type="text/html">
+        
+[[^query]]
+<li class="bb-typeahead-item">Begin typing to search for a user</li>
+[[/query]]
+[[#query]]
+<li class="bb-typeahead-item">Continue typing to search for a user</li>
+[[/query]]
+
+      </script>
+    
+      <script id="mention-no-results" type="text/html">
+        
+[[^searching]]
+<li class="bb-typeahead-item">Found no matching users for <em>[[query]]</em>.</li>
+[[/searching]]
+[[#searching]]
+<li class="bb-typeahead-item bb-typeahead-searching">Searching for <em>[[query]]</em>.</li>
+[[/searching]]
+
+      </script>
+    
+      <script id="emoji-result" type="text/html">
+        
+<span class="emoji-result">
+  <span class="emoji-result--avatar">
+    <img class="emoji" src="[[src]]">
+  </span>
+  <span class="name emoji-result--name">[[&name]]</span>
+</span>
+
+      </script>
+    
+      <script id="repo-typeahead-result" type="text/html">
+        <span class="aui-avatar aui-avatar-project aui-avatar-xsmall">
+  <span class="aui-avatar-inner">
+    <img src="[[avatar]]">
+  </span>
+</span>
+<span class="owner">[[&owner]]</span>/<span class="slug">[[&slug]]</span>
+
+      </script>
+    
+      <script id="scope-list-template" type="text/html">
+        <ul class="scope-list">
+  [[#scopes]]
+    <li class="scope-list--item">
+      <span class="scope-list--icon aui-icon aui-icon-small [[icon]]"></span>
+      <span class="scope-list--description">[[description]]</span>
+    </li>
+  [[/scopes]]
+</ul>
+
+      </script>
+    
+  </div>
+
+
+
+
+  
+  
+
+
+<script nonce="">
+  window.__initial_state__ = {"section": {"repository": {"connectActions": [], "cloneProtocol": "https", "currentRepository": {"scm": "git", "website": null, "name": "blockchain-tutorial", "language": "", "description": "", "links": {"clone": [{"href": "https://bitbucket.org/firewiccagroup/blockchain-tutorial.git", "name": "https"}, {"href": "git@bitbucket.org:firewiccagroup/blockchain-tutorial.git", "name": "ssh"}], "self": {"href": "https://bitbucket.org/!api/2.0/repositories/firewiccagroup/blockchain-tutorial"}, "html": {"href": "https://bitbucket.org/firewiccagroup/blockchain-tutorial"}, "avatar": {"href": "https://bytebucket.org/ravatar/%7Be3dbce86-74d3-40e6-8b83-14503ec28830%7D?ts=default"}}, "mainbranch": {"name": "master"}, "full_name": "firewiccagroup/blockchain-tutorial", "owner": {"has_2fa_enabled": null, "display_name": "E.S.A Security Group Shield", "uuid": "{2caa4c38-2859-48ec-8fb1-1f724f918d66}", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/users/%7B2caa4c38-2859-48ec-8fb1-1f724f918d66%7D"}, "html": {"href": "https://bitbucket.org/%7B2caa4c38-2859-48ec-8fb1-1f724f918d66%7D/"}, "avatar": {"href": "https://secure.gravatar.com/avatar/993bc96b47c84a95eeda19b63169a17f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FES-1.png"}}, "type": "user", "created_on": "2018-11-23T05:08:43.201017+00:00", "is_staff": false, "account_status": "active", "nickname": "Ambjorn Skold", "properties": {}, "account_id": "5bd0a5744b76d050e296ec7a"}, "updated_on": "2019-09-11T18:21:19.712688+00:00", "type": "repository", "slug": "blockchain-tutorial", "is_private": false, "uuid": "{e3dbce86-74d3-40e6-8b83-14503ec28830}"}, "mirrors": [], "menuItems": [{"analytics_label": "repository.source", "is_client_link": true, "icon_class": "icon-source", "badge_label": null, "weight": 200, "url": "/firewiccagroup/blockchain-tutorial/src", "tab_name": "source", "can_display": true, "label": "Source", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": ["/diff", "/history-node"], "target": "_self", "id": "repo-source-link", "icon": "icon-source"}, {"analytics_label": "repository.commits", "is_client_link": false, "icon_class": "icon-commits", "badge_label": null, "weight": 300, "url": "/firewiccagroup/blockchain-tutorial/commits/", "tab_name": "commits", "can_display": true, "label": "Commits", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-commits-link", "icon": "icon-commits"}, {"analytics_label": "repository.branches", "is_client_link": true, "icon_class": "icon-branches", "badge_label": null, "weight": 400, "url": "/firewiccagroup/blockchain-tutorial/branches/", "tab_name": "branches", "can_display": true, "label": "Branches", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-branches-link", "icon": "icon-branches"}, {"analytics_label": "repository.pullrequests", "is_client_link": true, "icon_class": "icon-pull-requests", "badge_label": null, "weight": 500, "url": "/firewiccagroup/blockchain-tutorial/pull-requests/", "tab_name": "pullrequests", "can_display": true, "label": "Pull requests", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-pullrequests-link", "icon": "icon-pull-requests"}, {"analytics_label": "user.addon", "is_client_link": true, "icon_class": "aui-iconfont-unfocus", "badge_label": null, "weight": 550, "url": "/firewiccagroup/blockchain-tutorial/addon/pipelines/home", "tab_name": "repopage-oB98xE-add-on-link", "can_display": true, "label": "Pipelines", "icon_url": "https://bitbucket-connect-icons.s3.amazonaws.com/add-on/icons/62acf41d-386f-49fd-b823-4f86445390e2.svg", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "type": "connect_menu_item", "id": "repopage-oB98xE-add-on-link", "target": "_self"}, {"analytics_label": "user.addon", "is_client_link": true, "icon_class": "aui-iconfont-unfocus", "badge_label": null, "weight": 560, "url": "/firewiccagroup/blockchain-tutorial/addon/pipelines/deployments", "tab_name": "repopage-yaM899-add-on-link", "can_display": true, "label": "Deployments", "icon_url": "https://bitbucket-connect-icons.s3.amazonaws.com/add-on/icons/fca72d46-7e20-4dc4-b6a8-c83fb9665cc6.svg", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "type": "connect_menu_item", "id": "repopage-yaM899-add-on-link", "target": "_self"}, {"analytics_label": "repository.downloads", "is_client_link": false, "icon_class": "icon-downloads", "badge_label": null, "weight": 800, "url": "/firewiccagroup/blockchain-tutorial/downloads/", "tab_name": "downloads", "can_display": true, "label": "Downloads", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-downloads-link", "icon": "icon-downloads"}], "bitbucketActions": [{"analytics_label": "repository.clone", "is_client_link": false, "icon_class": "icon-clone", "badge_label": null, "weight": 100, "url": "#clone", "tab_name": "clone", "can_display": true, "label": "<strong>Clone<\/strong> this repository", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-clone-button", "icon": "icon-clone"}, {"analytics_label": "repository.compare", "is_client_link": false, "icon_class": "aui-icon-small aui-iconfont-devtools-compare", "badge_label": null, "weight": 400, "url": "/firewiccagroup/blockchain-tutorial/branches/compare", "tab_name": "compare", "can_display": true, "label": "<strong>Compare<\/strong> branches or tags", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-compare-link", "icon": "aui-icon-small aui-iconfont-devtools-compare"}, {"analytics_label": "repository.fork", "is_client_link": false, "icon_class": "icon-fork", "badge_label": null, "weight": 500, "url": "/firewiccagroup/blockchain-tutorial/fork", "tab_name": "fork", "can_display": true, "label": "<strong>Fork<\/strong> this repository", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-fork-link", "icon": "icon-fork"}], "activeMenuItem": "commits"}}, "global": {"needs_marketing_consent": false, "features": {"crf-skip-excessive-diffs": true, "bleach-snippets-and-wikis": true, "ignore-bb-notification-updates": true, "whitelisted_throttle_exemption": true, "workspaces-api-proxy": true, "ignore-bb-notification": true, "exp-share-to-invite-variation": false, "account-switcher": true, "nav-next-notify-change": true, "show-billing-errors": true, "markdown-and-linkify-commits": true, "restrict-commit-author-data": true, "connect-v5-repopage": true, "nav-add-file": false, "app-switcher": true, "provisioning-api-jira-integration": true, "issue-tracker-include-attachment-url": true, "bbcs-367-log-session-invalidation": true, "hide-dashboard-nav-issues-tab": true, "auto-prs-prime-fallback": true, "enable-router-metrics": true, "diff-api-renames": true, "deny-invalid-redirect-uris-authorize-addon": true, "clone-in-xcode": true, "create-pr-dialog": true, "twofactor-recovery-flow": true, "provisioning-auto-login": true, "use-moneybucket": true, "statuspage-incident-message": true, "add-commit-authors-as-reviewers": true, "frontbucket-leave-repository": true, "new-source-browser": true, "identity-passthrough-percent": true, "strict-require-issue-key": true, "app-switcher-opsgenie": true, "hg-cli-deprecation-warning": true, "provisioning-api-list-teams": true, "download-repository-from-source-page": true, "hg-deprecation-warning": true}, "locale": "en", "geoip_country": null, "targetFeatures": {"crf-skip-excessive-diffs": true, "bleach-snippets-and-wikis": true, "ignore-bb-notification-updates": true, "whitelisted_throttle_exemption": true, "workspaces-api-proxy": true, "ignore-bb-notification": true, "account-switcher": true, "provisioning-api-list-teams": true, "nav-next-notify-change": true, "new-source-browser": true, "show-billing-errors": true, "show-guidance-message": true, "markdown-and-linkify-commits": true, "restrict-commit-author-data": true, "hide-dashboard-nav-issues-tab": true, "connect-v5-repopage": true, "app-switcher": true, "provisioning-api-jira-integration": true, "markdown-embedded-html": false, "spa-profile-repository-list": true, "issue-tracker-include-attachment-url": true, "bbcs-367-log-session-invalidation": true, "clonebundles": true, "prlinks-installer": true, "pride-logo": false, "auto-prs-prime-fallback": true, "diff-api-20-refactor": true, "enable-router-metrics": true, "provisioning-auto-login": true, "diff-api-renames": true, "deny-invalid-redirect-uris-authorize-addon": true, "clone-in-xcode": true, "create-pr-dialog": true, "twofactor-recovery-flow": true, "new-code-review": false, "use-moneybucket": true, "navigation-next": true, "atlassian-editor": true, "force-old-code-review": false, "frontbucket-leave-repository": true, "statuspage-incident-message": true, "identity-passthrough-percent": true, "strict-require-issue-key": true, "exp-new-user-survey": true, "evolution": false, "new-code-review-commits-api-usage": false, "app-switcher-opsgenie": true, "hg-cli-deprecation-warning": true, "add-commit-authors-as-reviewers": true, "download-repository-from-source-page": true, "spa-commit-list": true, "hg-deprecation-warning": true}, "isFocusedTask": false, "browser_monitoring": true, "identityPassthroughEnabled": true, "is_mobile_user_agent": false, "flags": [], "site_message": "", "isNavigationOpen": true, "path": "/firewiccagroup/blockchain-tutorial/commits/a855241f2d68d54356c61d61cbd1182485d4bbd8", "focusedTaskBackButtonUrl": null, "targetUser": {"has_2fa_enabled": null, "display_name": "E.S.A Security Group Shield", "uuid": "{2caa4c38-2859-48ec-8fb1-1f724f918d66}", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/users/%7B2caa4c38-2859-48ec-8fb1-1f724f918d66%7D"}, "html": {"href": "https://bitbucket.org/%7B2caa4c38-2859-48ec-8fb1-1f724f918d66%7D/"}, "avatar": {"href": "https://secure.gravatar.com/avatar/993bc96b47c84a95eeda19b63169a17f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FES-1.png"}}, "type": "user", "created_on": "2018-11-23T05:08:43.201017+00:00", "is_staff": false, "account_status": "active", "nickname": "Ambjorn Skold", "properties": {}, "account_id": "5bd0a5744b76d050e296ec7a"}, "whats_new_feed": "https://bitbucket.org/blog/wp-json/wp/v2/posts?categories=196&context=embed&per_page=6&orderby=date&order=desc"}};
+  window.__settings__ = {"MARKETPLACE_TERMS_OF_USE_URL": null, "JIRA_ISSUE_COLLECTORS": {"code-review-beta": {"url": "https://bitbucketfeedback.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-4bqv2z/b/20/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=bb066400", "id": "bb066400"}, "code-review-rollout": {"url": "https://bitbucketfeedback.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-4bqv2z/b/20/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=de003e2d", "id": "de003e2d"}, "source-browser": {"url": "https://bitbucketfeedback.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-tqnsjm/b/20/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=c19c2ff6", "id": "c19c2ff6"}}, "CANON_URL": "https://bitbucket.org", "AVAILABLE_SITES_URL": "https://api-private.atlassian.com/available-sites", "CONSENT_HUB_FRONTEND_BASE_URL": "https://preferences.atlassian.com", "API_CANON_URL": "https://api.bitbucket.org", "SOCIAL_AUTH_ATLASSIANID_LOGOUT_URL": "https://id.atlassian.com/logout", "EMOJI_STANDARD_BASE_URL": "https://api-private.atlassian.com/emoji/"};
+  window.__webpack_nonce__ = '';
+</script>
+
+<script src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/jsi18n/en/djangojs.js" nonce=""></script>
+
+  <script src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/dist/webpack/locales/en.js" nonce=""></script>
+
+<script src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/dist/webpack/vendor.js" nonce=""></script>
+<script src="https://d301sr5gafysq2.cloudfront.net/6dc99cf7265f/dist/webpack/app.js" nonce=""></script>
+
+
+<script async src="https://www.google-analytics.com/analytics.js" nonce=""></script>
+
+<script nonce="" type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"a2cef8c3d3","agent":"","transactionName":"NFcGYEdUW0IAVE1QCw0dIkFbVkFYDlkWWw0XUBFXXlBBHwBHSUpKEVcUWwcbQ1gEQEoDBwtTClNQRlBF","applicationID":"1841284","errorBeacon":"bam.nr-data.net","applicationTime":415}</script>
+</body>
+</html>
